@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/assets/styles/style.css">
 </head>
 <body>
-    <nav class="mainNav d-flex justify-content-start align-items-center">
+    <nav class="mainNav d-flex justify-content-between align-items-center">
         <div id="navMenu" class="d-flex centered">
             <input type="checkbox">
             <span></span>
@@ -18,7 +18,7 @@
                     <h3>Menu principal</h3>
                     <a href="index.html"><p>Accueil</p></a>
                     <hr>
-                    <a href="git-commands.html"><p>Commandes Git</p></a>
+                    <a href="git-commands.html"><p>GitHub</p></a>
                     <a href="uml-diagrams.html"><p>Diagrammes UML</p></a>
                     <a href="merise-method.html" class="link-active"><p>Méthode Merise</p></a>
                     <a href="javascript.html"><p>Javascript</p></a>
@@ -32,12 +32,27 @@
                 <p>Mon encyclopédie</p>
             </div>
         </a>
-        <div id="laptopNav" class="d-flex gap-1">
+        <div id="laptopNav" class="d-flex">
             <a href="index.html"><p>Accueil</p></a>
-            <a href="git-commands.html"><p>Commandes Git</p></a>
-            <a href="uml-diagrams.html"><p>Diagrammes UML</p></a>
-            <a href="merise-method.html" class="link-active"><p>Méthode Merise</p></a>
+            <div class="dropdown">
+                <button class="dropdown-btn"><p>GitHub</p></button>
+                <div class="dropdown-content">
+                    <a href="git-commands.html"><p>Commandes</p></a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropdown-btn link-active"><p>Méthodes</p></button>
+                <div class="dropdown-content">
+                    <a href="uml-diagrams.html"><p>UML</p></a>
+                    <a href="merise-method.html"><p>Merise</p></a>
+                </div>
+            </div>
             <a href="javascript.html"><p>Javascript</p></a>
+        </div>
+        <div id="changeMode">
+            <input id="changeModeBtn" type="checkbox">
+            <div id="changeModeBox"></div>
+            <span id="changeModeSwitch"></span>
         </div>
     </nav>
     <main class="container">
@@ -48,5 +63,6 @@
     <footer>
 
     </footer>
+    <script src="/assets/js/theme.js"></script>
 </body>
 </html>

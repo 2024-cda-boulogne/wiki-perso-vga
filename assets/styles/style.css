@@ -2,41 +2,47 @@
     font-family: 'LinLibertine';
     src: url(/assets/styles/fonts/LinLibertine/LinLibertine_DR.ttf);
 }
-
 :root {
     --navbar-height: 50px;
 
-    --clr-links: #36c;
-    --clr-links-active: rgb(110, 51, 204);
+    --clr-primary: #222;
+    --clr-secondary: #fff;
+    --clr-links: rgb(51, 102, 204);
+    --clr-links-active: rgb(102, 51, 204);
 
-    --clr-dark-mode-primary: #111;
-    --clr-dark-mode-secondary: #777;
-
-    --clr-light-mode-primary: #fff;
-    --clr-light-mode-secondary: #ddd;
+    --theme: "light";
+    --clr-mode-btn-primary: #eee;
+    --clr-mode-btn-secondary: #777;
+    --clr-mode-btn-tertiary: #333;
 }
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+body {
+    background: var(--clr-secondary);
+}
+h1,
+p {
+    color: var(--clr-primary);
+}
 /* navbar */
 .mainNav {
     height: var(--navbar-height);
-    box-shadow: 0 0 10px #000;
+    padding: 0 10px;
+    /* box-shadow: 0 0 10px #000; */
 }
 #globe {
     width: 50px;
     height: 50px;
-    background-image: url(/assets/styles/images/globe-with-binary-code-ball-vector-32869767.jpg);
+    background-image: url(/assets/styles/images/globe.png);
     background-size: contain;
 }
 #logo {
     text-decoration: none;
-    color: #111;
+    color: var(--clr-primary);
 }
 #logo p {
     font-family: 'LinLibertine';
@@ -65,7 +71,7 @@
     width: 28px;
     height: 4px;
     border-radius: 2px;
-    background: #000;
+    background: var(--clr-primary);
     transition: .25s;
 }
 #navMenu input:checked ~ span:nth-child(2) {
@@ -101,7 +107,7 @@
     padding-top: 20px;
     gap: 1rem;
     backdrop-filter: blur(24px);
-    box-shadow: inset 0 0 10px #000;
+    box-shadow: inset 0 0 10px var(--clr-primary);
 }
 #mobileNav h3 {
     font-size: 1rem;
@@ -114,15 +120,20 @@
 }
 #mobileNav a,
 #mobileNav a p,
-#laptopNav a {
+#laptopNav a,
+#laptopNav a p,
+.dropdown-btn p {
     position: relative;
     width: auto;
     height: auto;
+    font-size: 1rem;
     text-decoration: none;
     color: var(--clr-links);
+    user-select: none;
 }
 #mobileNav a p::before,
-#laptopNav a::before {
+#laptopNav a p::before,
+#laptopNav button::before {
     content: '';
     position: absolute;
     bottom: -2px;
@@ -133,15 +144,38 @@
     transition: .25s;
 }
 #mobileNav a p:hover::before,
-#laptopNav a:hover::before {
+#laptopNav a p:hover::before,
+#laptopNav button:hover::before {
     width: 100%;
     left: 0;
 }
 #laptopNav {
-    gap: 10px;
+    gap: 60px;
 }
 #laptopNav a {
     white-space: nowrap;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-btn {
+    background: none;
+    border: none;
+}
+.dropdown-content {
+    position: absolute;
+    margin-top: 2px;
+    width: 100%;
+    display: none;
+    background: var(--clr-secondary);
+}
+.dropdown-content a {
+    display: block;
+    padding-top: 5px;
+}
+.dropdown:hover .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
 }
 .link-active::before,
 .link-active p::before  {
@@ -151,6 +185,8 @@
 .link-active p {
     color: var(--clr-links-active) !important;
 }
+
+/* dark / light mode */
 #changeMode {
     position: relative;
     display: flex;
@@ -165,10 +201,11 @@
     position: absolute;
     width: 40px;
     height: 24px;
-    border: 3px solid var(--clr-dark-mode-secondary);
+    border: 3px solid var(--clr-mode-btn-secondary);
     border-radius: 12px;
-    background: var(--clr-dark-mode-primary);
-    transition: .25s;
+    background-color: var(--clr-mode-btn-primary);
+    background-image: url(/assets/styles/images/modes-ico.png);
+    background-size: contain;
 }
 #changeMode input {
     position: absolute;
@@ -183,18 +220,12 @@
     width: 16px;
     height: 16px;
     border-radius: 8px;
-    background: var(--clr-light-mode-primary);
-    transform: translateX(-50%);
+    background: var(--clr-mode-btn-tertiary);
     transition: .25s;
 }
-#changeMode input:checked ~ #changeModeBox {
-    background: var(--clr-light-mode-primary);
-    border: 2px solid var(--clr-light-mode-secondary);
-}
-#changeMode input:checked ~ span {
+/* #changeMode input:checked ~ span {
     transform: translateX(50%);
-    background: var(--clr-dark-mode-secondary);
-}
+} */
 
 
 /* general */
@@ -271,7 +302,7 @@ h1 {
     }
     hr {
         width: 50%;
-        margin: 15px 0;
+        margin: 10px 0;
     }
 }
 @media screen and (min-width: 720px) {
