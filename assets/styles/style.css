@@ -8,6 +8,12 @@
 
     --clr-links: #36c;
     --clr-links-active: rgb(110, 51, 204);
+
+    --clr-dark-mode-primary: #111;
+    --clr-dark-mode-secondary: #777;
+
+    --clr-light-mode-primary: #fff;
+    --clr-light-mode-secondary: #ddd;
 }
 
 * {
@@ -20,7 +26,6 @@
 /* navbar */
 .mainNav {
     height: var(--navbar-height);
-    padding: 0 10px;
     box-shadow: 0 0 10px #000;
 }
 #globe {
@@ -32,9 +37,6 @@
 #logo {
     text-decoration: none;
     color: #111;
-}
-#logoText {
-
 }
 #logo p {
     font-family: 'LinLibertine';
@@ -83,11 +85,10 @@
 }
 #mobileMenu {
     position: fixed;
-    top: 0;
+    top: 50px;
     left: -50%;
     width: 50%;
     height: 100vh;
-    padding-top: 50px;
     transition: .25s;
 }
 #navMenu input:checked ~ #mobileMenu {
@@ -137,19 +138,64 @@
     left: 0;
 }
 #laptopNav {
-    padding-left: 5px;
-    gap: 12px;
+    gap: 10px;
 }
 #laptopNav a {
     white-space: nowrap;
 }
-.link-active::before {
+.link-active::before,
+.link-active p::before  {
     width: 100% !important;
     background: var(--clr-links-active) !important;
 }
 .link-active p {
-    color: var(--clr-links-active);
+    color: var(--clr-links-active) !important;
 }
+#changeMode {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 24px;
+    padding: 0 1px;
+    margin-right: 5px;
+}
+#changeModeBox {
+    position: absolute;
+    width: 40px;
+    height: 24px;
+    border: 3px solid var(--clr-dark-mode-secondary);
+    border-radius: 12px;
+    background: var(--clr-dark-mode-primary);
+    transition: .25s;
+}
+#changeMode input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 10;
+}
+#changeMode span {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    background: var(--clr-light-mode-primary);
+    transform: translateX(-50%);
+    transition: .25s;
+}
+#changeMode input:checked ~ #changeModeBox {
+    background: var(--clr-light-mode-primary);
+    border: 2px solid var(--clr-light-mode-secondary);
+}
+#changeMode input:checked ~ span {
+    transform: translateX(50%);
+    background: var(--clr-dark-mode-secondary);
+}
+
 
 /* general */
 h1 {
@@ -197,17 +243,19 @@ h1 {
 .gap-1 {
     gap: 1rem;
 }
-
+.mb-3 {
+    margin-bottom: .5rem;
+}
 
 /* container */
 .container {
+    width: 100%;
     padding: 20px;
 }
 
 /* media */
 @media screen and (max-width: 360px) {
     .container {
-        width: 100%;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -217,7 +265,6 @@ h1 {
 }
 @media screen and (min-width: 450px) {
     .container {
-        width: 420px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -228,6 +275,12 @@ h1 {
     }
 }
 @media screen and (min-width: 720px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 40px;
+    }
     #navMenu {
         display: none;
         opacity: 0;
