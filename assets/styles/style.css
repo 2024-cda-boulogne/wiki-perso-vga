@@ -308,10 +308,10 @@ h1 {
         flex-direction: column;
         align-items: center;
     } */
-    hr {
+    /* hr {
         width: 50%;
         margin: 10px 0;
-    }
+    } */
 }
 @media screen and (min-width: 720px) {
     .container {
