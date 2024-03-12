@@ -5,17 +5,21 @@
 :root {
     --navbar-height: 50px;
 
-    --clr-primary: #222;
-    --clr-secondary: #fff;
-    --clr-links: rgb(51, 102, 204);
-    --clr-links-active: rgb(102, 51, 204);
+    --theme:                   "light";
+    --clr-primary:             #222;
+    --clr-secondary:           #fff;
+    --clr-links:               rgb(51, 102, 204);
+    --clr-links-active:        rgb(102, 51, 204);
 
-    --theme: "light";
-    --clr-mode-btn-primary: #eee;
-    --clr-mode-btn-secondary: #777;
-    --clr-mode-btn-tertiary: #333;
+    --clr-mode-btn-primary:    #eee;
+    --clr-mode-btn-secondary:  #777;
+    --clr-mode-btn-tertiary:   #333;
 
-    --tt: rgb(176, 148, 231);
+    --clr-code-example-bg:     #f8f8f8;
+    --clr-code-example-text:   #3D7B7B;
+    --clr-code-example-border: #eaecf0;
+
+    /* --tt: #59645e; */
 }
 * {
     padding: 0;
@@ -30,7 +34,8 @@ h1,
 h2,
 h3,
 p,
-li {
+li,
+table {
     color: var(--clr-primary);
 }
 /* navbar */
@@ -249,10 +254,42 @@ li {
 h1 {
     font-family: 'LinLibertine';
 }
-
-
-
-
+tr,
+td {
+    text-align: center;
+}
+th {
+    min-width: 70px;
+}
+th,
+td {
+    padding: 5px;
+}
+a,
+a:visited {
+    color: var(--clr-links);
+    text-decoration: none;
+}
+.code-example {
+    width: 100%;
+    padding: 20px;
+    background: var(--clr-code-example-bg);
+    border: 1px solid var(--clr-code-example-border);
+}
+.code-example p {
+    color: var(--clr-code-example-text);
+}
+.p-title {
+    position: relative;
+}
+.p-title::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    width: 100%;
+    height: 0;
+    border-bottom: 1px dotted var(--clr-primary);
+}
 /* layout */
 .d-flex {
     display: flex;
@@ -312,17 +349,26 @@ h1 {
 .mb-3 {
     margin-bottom: .5rem;
 }
+.mb-4 {
+    margin-bottom: .75rem;
+}
 .mb-5 {
     margin-bottom: 1rem;
 }
 .ps-5 {
     padding-left: 1rem;
 }
+.w-auto {
+    width: auto;
+}
 .w-100 {
     width: 100%;
 }
 .fs-i {
     font-style: italic;
+}
+.ls-none {
+    list-style: none;
 }
 /* dynamic */
 .hidden {
@@ -411,9 +457,12 @@ h1 {
     padding: 20px;
     margin-top: var(--navbar-height);
 }
-.container img {
+.container img:not(.small-img) {
     width: 100%;
     border: 1px solid var(--clr-primary);
+}
+.small-img {
+    width: 240px;
 }
 /* media */
 @media screen and (max-width: 480px) {
@@ -429,9 +478,11 @@ h1 {
         margin: 10px;
     }
     p,
+    ul,
     li {
+        width: 100%;
         font-size: .9rem;
-        line-height: 1.1rem;
+        line-height: 1.2rem;
         text-align: justify;
     }
 }

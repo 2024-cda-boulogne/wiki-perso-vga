@@ -61,16 +61,16 @@
     <main class="container">
         <h1 class="mb-2">Diagrammes UML</h1>
         <hr class="mt-5">
-        <h2 class="w-100 mt-5 mb-5">Définition de l'UML</h2>
+        <h1 class="w-100 mt-5 mb-5">Définition de l'UML</h1>
         <p class="mb-5">
-            Le Langage de Modélisation Unifié, de l'anglais Unified Modeling Language (UML),
+            Le <b>Langage de Modélisation Unifié</b>, de l'anglais <i><b>U</b>nified <b>M</b>odeling <b>L</b>anguage (<b>UML</b>)</i>,
             est un langage de modélisation graphique à base de pictogrammes conçu comme une méthode normalisée de visualisation dans les domaines du développement logiciel et en conception orientée objet. 
         </p>
         <p class="mb-5">
             UML est destiné à faciliter la conception des documents nécessaires au développement d'un logiciel orienté objet, comme standard de modélisation de l'architecture logicielle.
             Les différents éléments représentables sont : 
         </p>
-        <ul class="w-100 ms-5 mb-5 ps-5">
+        <ul class="ms-5 mb-5 ps-5">
             <li>Activité d'un objet/logiciel</li>
             <li>Acteurs</li>
             <li>Processus</li>
@@ -82,9 +82,9 @@
             Il est également possible de générer automatiquement tout ou partie du code, par exemple en langage Java, à partir des documents réalisés.
         </p>
         <hr class="mt-3">
-        <h2 class="w-100 mt-5 mb-5">Diagramme de séquence</h2>
+        <h1 class="w-100 mt-5 mb-5">Diagramme de séquence</h1>
         <p class="mb-5">
-            Le diagramme de séquence permet de montrer les interactions d'objets dans le cadre d'un scénario d'un diagramme des cas d'utilisation.
+            Le <b>diagramme de séquence</b> permet de montrer les interactions d'objets dans le cadre d'un scénario d'un diagramme des cas d'utilisation.
             Dans un souci de simplification, on représente l'acteur principal à gauche du diagramme, et les acteurs secondaires éventuels à droite du système.
             Le but est de décrire comment se déroulent les interactions entre les acteurs ou objets.
         </p>
@@ -95,20 +95,20 @@
         <p class="mt-5 mb-2 fs-i">Exemple d'un diagramme de séquence</p>
         <img class="mb-5" src="/assets/styles/images/example_uml_sequence.jpg" alt="Exemple d'un diagramme de séquence">
         <hr class="mt-5">
-        <h2 class="w-100 mt-5 mb-5">Diagramme de cas d'utilisation</h2>
-        <p>
-            Les diagrammes de cas d'utilisation (DCU) sont utilisés pour une représentation du comportement fonctionnel d'un système logiciel.
+        <h1 class="w-100 mt-5 mb-5">Diagramme de cas d'utilisation</h1>
+        <p class="mb-5">
+            Les <b>diagrammes de cas d'utilisation</b> (<b>DCU</b>) sont utilisés pour une représentation du comportement fonctionnel d'un système logiciel.
             Ils sont utiles pour des présentations auprès de la direction ou des acteurs d'un projet, mais pour le développement, les cas d'utilisation sont plus appropriés.
             En effet, un cas d'utilisation (use cases) représente une unité discrète d'interaction entre un utilisateur (humain ou machine) et un système.
-            Ainsi, dans un diagramme de cas d'utilisation, les utilisateurs sont appelés acteurs (actors), et ils apparaissent dans les cas d'utilisation. 
+            Ainsi, dans un <b>diagramme de cas d'utilisation</b>, les utilisateurs sont appelés acteurs (actors), et ils apparaissent dans les cas d'utilisation. 
         </p>
         <p class="mt-5 mb-2 fs-i">Exemple d'un diagramme de cas d'utilisation</p>
-        <img class="mb-5" src="/assets/styles/images/example_uml_utilisation.jpg" alt="Exemple d'un diagramme de séquence">
+        <img class="mb-5" src="/assets/styles/images/example_uml_utilisation.jpg" alt="Exemple d'un diagramme de cas d'utilisation">
         <hr class="mt-5">
-        <h2 class="w-100 mt-5 mb-5">Diagramme d'activité</h2>
+        <h1 class="w-100 mt-5 mb-5">Diagramme d'activité</h1>
         <p class="mb-5">
-            Un diagramme d'activité permet de modéliser un processus interactif, global ou partiel pour un système donné (logiciel, système d'information).
-            Il est recommandable pour exprimer une dimension temporelle sur une partie du modèle, à partir de diagrammes de classes ou de cas d'utilisation, par exemple. 
+            Un <b>diagramme d'activité</b> permet de modéliser un processus interactif, global ou partiel pour un système donné (logiciel, système d'information).
+            Il est recommandable pour exprimer une dimension temporelle sur une partie du modèle, à partir de diagrammes de classes ou de cas d'utilisation, par exemple.
         </p>
         <p class="mb-5">
             Le diagramme d'activité est une représentation proche de l'organigramme ; la description d'un cas d'utilisation par un diagramme d'activité correspond à sa traduction algorithmique.
@@ -121,7 +121,7 @@
         <p class="mb-5">
             Le diagramme d'activité présente une vision macroscopique et temporelle du système modélisé :
         </p>
-        <ul class="w-100 ms-5 mb-5 ps-5">
+        <ul class="ms-5 mb-5 ps-5">
             <li>Action</li>
             <li>Action structurée</li>
             <li>Historique</li>
@@ -130,7 +130,207 @@
             <li>"Join" et "fork"</li>
         </ul>
         <p class="mt-5 mb-2 fs-i">Exemple d'un diagramme d'activité</p>
-        <img class="mb-5" src="/assets/styles/images/example_uml_activite.png" alt="Exemple d'un diagramme de séquence">
+        <img class="mb-5" src="/assets/styles/images/example_uml_activite.png" alt="Exemple d'un diagramme d'activité">
+        <hr class="mt-5">
+        <h1 class="w-100 mt-5 mb-5">Diagramme de déploiement</h1>
+        <p class="mb-5">
+            Un diagramme de déploiement est une vue statique qui sert à représenter l'utilisation de l'infrastructure physique par le système
+            et la manière dont les composants du système sont répartis ainsi que leurs relations entre eux.
+            Les éléments utilisés par un diagramme de déploiement sont principalement les nœuds, les composants, les associations et les artefacts.
+            Les caractéristiques des ressources matérielles physiques et des supports de communication peuvent être précisées par stéréotype.
+        </p>
+        <p class="mb-5">
+            Les <b>nœuds</b> (nodes), représentés par des cubes, sont des composants mécaniques de l'infrastructure tel un routeur, un ordinateur, un assistant personnel...
+            Ceux-ci peuvent comprendre d'autres nœuds ou artefacts. Les nœuds internes indiquent l'environnement d'exécution plutôt que l'infrastructure physique.
+        </p>
+        <p class="mb-5">
+            Les <b>composants</b>, représentés par des boites rectangulaires avec deux rectangles sortant du côté gauche, sont les différentes parties du système étudié.
+        </p>
+        <p class="mb-5">
+            Les <b>connexions</b> sont principalement de deux types : <b>associations</b> ou <b>dépendances</b>.
+        </p>
+        <p class="mb-5">
+            Les <b>associations</b>, représentées par de simples lignes sont des liens de communication, s'établissent entre les différents composants du système.
+        </p>
+        <p class="mb-5">
+            Les <b>dépendances</b>, représentées par des flèches vides, sont régies par les règles standard de l'UML 2.0.
+        </p>
+        <p class="mb-5">
+            Dans ce contexte, un <b>artefact</b> est une manière de définir un fichier, un programme, une bibliothèque ou une base de données construite ou modifiée dans un projet.
+            Ces <b>artefacts</b> mettent en œuvre des collections de composants qui sont consommées ou créées durant l'une des étapes du processus de déploiement.
+        </p>
+        <p class="mt-5 mb-2 fs-i">Exemple d'un diagramme de déploiement</p>
+        <img class="mb-5" src="/assets/styles/images/example_ulm_deploiement.png" alt="Exemple d'un diagramme de déploiement">
+        <hr class="mt-5">
+        <h1 class="w-100 mt-5 mb-5">Diagramme de classes</h1>
+        <p class="mb-5">
+            Le <b>diagramme de classes</b> est un schéma utilisé en génie logiciel pour présenter les classes et les interfaces des systèmes ainsi que leurs relations.
+            Ce diagramme fait partie de la partie statique d'UML, ne s'intéressant pas aux aspects temporels et dynamiques.
+        </p>
+        <p class="mb-5">
+            Une classe décrit les responsabilités, le comportement et le type d'un ensemble d'objets. Les éléments de cet ensemble sont les instances de la classe.
+        </p>
+        <p class="mb-5">
+            Une classe est un ensemble de fonctions et de données (attributs) qui sont liées ensemble par un champ sémantique. Les classes sont utilisées dans la programmation orientée objet.
+            Elles permettent de modéliser un programme et ainsi de découper une tâche complexe en plusieurs petits travaux simples.
+        </p>
+        <p class="mb-5">
+            Les classes peuvent être reliées grâce au mécanisme d'héritage qui permet de mettre en évidence des relations de parenté.
+            D'autres relations sont possibles entre des classes, représentées par un arc spécifique dans le diagramme de classes.
+        </p>
+        <p class="mb-5">
+            Elles sont finalement instanciées pour créer des objets (une classe est un moule à objet : elle décrit les caractéristiques des objets,
+            les objets contiennent leurs valeurs propres pour chacune de ces caractéristiques lorsqu'ils sont instanciés).
+        </p>
+        <h2 class="w-100 mt-3 mb-3">Schéma d'une classe</h2>
+        <p class="mb-5">
+            Une classe est représentée par un rectangle séparé en trois parties :
+        </p>
+        <ul class="ms-5 mb-5 ps-5">
+            <li>la première partie contient le nom de la classe</li>
+            <li>la seconde contient les attributs de la classe</li>
+            <li>la dernière contient les méthodes de la classe</li>
+        </ul>
+        <p class="mb-5">La seconde et la dernière représentent le <b>comportement</b> de la classe.</p>
+        <p class="w-auto mt-5 mb-2 fs-i">Modèle d'une simple classe.</p>
+        <img class="small-img mb-5" src="/assets/styles/images/ModeleDiagrammeDeClasseFR.svg" alt="Modèle de diagramme de classe">
+        <h2 class="w-100 mt-5 mb-3">Première partie : le nom de la classe</h2>
+        <p class="mb-5">Il est écrit dans le rectangle du haut.</p>
+        <p class="mb-5">Dans une classe classique, le nom est écrit en romain (exemple : « ClasseClassique »).</p>
+        <p class="mb-5">Le nom des classes abstraites est écrit en italique (exemple : <i>ClasseAbstraite</i>).</p>
+        <p class="w-auto mt-5 fs-i">Modèle d'une classe abstraite.</p>
+        <img class="small-img mb-5" src="/assets/styles/images/ModeleClasseAbstraite.svg" alt="Modèle de classe abstraite">
+        <p class="mb-5">Les classes template ont, dans leur angle supérieur droit, un rectangle dont la bordure est en pointillé et qui contient les types des paramètres.</p>
+        <p class="w-auto mt-5 mb-4 fs-i">Modèle d'une classe template.</p>
+        <img class="small-img mb-5" src="/assets/styles/images/ModeleClasseTemplate.svg" alt="Modèle de classe template">
+        <h2 class="w-100 mt-5 mb-3">Seconde partie : les attributs</h2>
+        <p class="mb-5">La syntaxe d'un attribut est la suivante :</p>
+        <p class="mb-5"><i>Visibilité nomAttribut [multiplicité] : typeAttribut = Initialisation</i></p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Visibilité</b></p>
+        <p class="mb-5">La notion de visibilité indique qui peut avoir accès à l'attribut.</p>
+        <p class="mb-3">Elle ne peut prendre que quatre valeurs :</p>
+        <table class="mb-5" border="1">
+            <thead>
+                <tr>
+                    <th>Caractère</th>
+                    <th>Rôle</th>
+                    <th>Mot clé</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>+</td>
+                    <td>Accès public</td>
+                    <td>public</td>
+                    <td>Toutes les autres classes ont accès à cet attribut.</td>
+                </tr>
+                <tr>
+                    <td>#</td>
+                    <td>Accès protégé</td>
+                    <td>protected</td>
+                    <td>Seule la classe elle-même et les classes filles (héritage) ont accès à cet attribut.</td>
+                </tr>
+                <tr>
+                    <td>~</td>
+                    <td>Accès package</td>
+                    <td>package</td>
+                    <td>Classe visible uniquement dans le package.</td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>Accès privé</td>
+                    <td>private</td>
+                    <td>Seule la classe elle-même a accès à cet attribut.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mb-5">
+            Afin de respecter le principe fondamental d'encapsulation, tous les attributs devraient être privés.
+        </p>
+        <p class="mb-5">
+            Pour qu'un attribut privé ou protégé soit récupérable, on utilise en général un getter (ou accesseur); pour qu'il soit modifiable, on utilise en général un setter (ou mutateur).
+        </p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Nom</b></p>
+        <p class="mb-5">
+            Il ne doit pas comporter d'espaces, de signes de ponctuation ou d'accents.
+            Pour remplacer les espaces, plusieurs conventions existent : on peut intercaler un symbole _ entre les mots ou utiliser la méthode CamelCase qui consiste à mettre la première lettre
+            de chaque mot en capitale (par exemple, nom de l'objet peut devenir : nom_objet ou NomObjet).
+        </p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Multiplicité</b></p>
+        <p class="mb-5">
+            La multiplicité représente le nombre de fois où la variable peut intervenir. Elle est représentée entre crochets.
+        </p>
+        <p class="mb-5">
+            Par exemple, si une personne possède deux numéros de téléphone, on préfèrera noTelephones[2] à noTelephone1 et noTelephone2.
+        </p>
+        <h2 class="w-100 mt-5 mb-3">Troisième partie : les méthodes</h2>
+        <p class="mb-5">La syntaxe d'une méthode est la suivante :</p>
+        <p class="mb-5"><i>Visibilité nomFonction(directionParamètreN nomParamètreN : typeParamètreN) : typeRetour</i></p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Visibilité</b></p>
+        <p class="mb-5">La notion de visibilité est la même que celle des attributs.</p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Direction du paramètre</b></p>
+        <p class="mb-5">Indique si le paramètre est rentrant (in), s'il est sortant (out) ou s'il est rentrant et sortant (inout).</p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Exemples de méthode</b></p>
+        <div class="code-example mt-3 mb-3"><p>//méthode publique getAge() retournant un entier</p></div>
+        <p class="mb-5">+ getAge() : int</p>
+        <div class="code-example mt-2 mb-3"><p>//méthode protégée calculerAge() prenant comme paramètre dateNaissance de type Date et ne retournant rien (void)</p></div>
+        <p class="mb-5"># calculerAge(in dateNaissance : Date) : void</p>
+        <h2 class="w-100 mt-2 mb-3">Relations entre les classes</h2>
+        <p class="mb-5">Ces relations ne sont pas propres aux diagrammes de classes, elles peuvent également s'appliquer à l'ensemble des diagrammes statiques.</p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Héritage</b></p>
+        <p class="mb-5">
+            L'héritage est un principe de division par généralisation et spécialisation, représenté par un trait reliant les deux classes et dont l'extrémité du côté de la classe mère comporte un triangle.
+        </p>
+        <p class="mb-5">
+            La classe fille hérite de tous les attributs et méthodes, qu'ils soient publics, protégés ou privés.
+            Cependant, elle ne peut pas utiliser directement les attributs et méthodes privés (que ce soit en lecture ou en écriture), sauf par l'intermédiaire d'une méthode héritée (publique ou protégée).
+        </p>
+        <p class="w-auto mt-5 fs-i">T' hérite de T.</p>
+        <img class="small-img mb-5" src="/assets/styles/images/Vererbung_T.svg.png" alt="Exemple d'héritage de classe">
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Association</b></p>
+        <p class="mb-5">
+            L'association est une connexion sémantique entre deux classes (relation logique). Une association peut être nommée. L'invocation d'une méthode est une association.
+            Elle peut être binaire, dans ce cas elle est représentée par un simple trait, ou n-aire, les classes sont reliées à un losange par des traits simples.
+            Ces relations peuvent être nommées. L'association n'est utilisée que dans les diagrammes de classe.
+        </p>
+        <ul class="mb-5 ps-3">
+            <li class="ls-none mb-4">
+                <p class="ps-5">
+                    <b>multiplicité</b> : comparable aux cardinalités du système <a href="merise-method.html">Merise</a>,
+                    sert à compter le nombre minimum et maximum d'instances de chaque classe dans la relation liant 2 ou plusieurs classes.
+                </p>
+            </li>
+            <li class="ls-none">
+                <p class="ps-5">
+                    <b>navigabilité</b> : les associations sont bidirectionnelles et peuvent être parcourues dans les 2 sens.
+                    Lorsque l’association est contrainte pour devenir unidirectionnelle, le sens de navigation qui reste possible est spécifié par une flèche.
+                </p>
+            </li>
+        </ul>
+        <p class="mb-5">
+            Il est préférable de laisser les associations bidirectionnelles. UML autorise d’alerter sur le sens de la navigation interdit avec une croix en plus de la flèche. 
+        </p>
+        <p class="w-auto mt-5 fs-i">Navigabilité des associations</p>
+        <p class="fs-i">1 - Bidirectionnelle</p>
+        <p class="fs-i">2 - Mono-directionnelle, Invocation de méthode</p>
+        <p class="fs-i mb-3">3 - interdit une association.</p>
+        <img class="small-img mb-5" src="/assets/styles/images/Association.JPG" alt="Exemple d'héritage de classe">
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Agrégation</b></p>
+        <p class="mb-5">
+            L'agrégation est une association avec relation de subordination, représentée par un trait reliant les deux classes et dont l'origine se distingue de l'autre extrémité (la classe subordonnée)
+            par un losange vide. Une des classes regroupe d'autres classes. L'objet T utilise une instance de la classe T'.
+        </p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Composition</b></p>
+        <p class="mb-5">
+            La composition est une agrégation avec cycle de vie dépendant : la classe composante est détruite lorsque la classe composée (ou classe composite) disparaît.
+            L'origine de cette association est représentée par un losange plein. L'objet T' est composé de T. 
+        </p>
+        <p class="w-100 mt-3 mb-3"><b class="p-title">Dépendance</b></p>
+        <p class="mb-5">
+            Implique qu'une ou plusieurs méthodes reçoivent un objet d'un type d'une autre classe. Il n'y a pas de liaison en ce qui concerne la destruction d'objets mais une dépendance est quand même là.
+            Elle est symbolisée par une flèche en pointillés, dont son extrémité possède trois traits qui se coupent en un même point
+        </p>
     </main>
     <footer>
 
