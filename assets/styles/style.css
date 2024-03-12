@@ -25,6 +25,7 @@ body {
     background: var(--clr-secondary);
 }
 h1,
+h3,
 p {
     color: var(--clr-primary);
 }
@@ -57,6 +58,7 @@ p {
     position: relative;
     width: 32px;
     height: 32px;
+    z-index: 99;
 }
 #navMenu input {
     position: absolute;
@@ -73,6 +75,7 @@ p {
     border-radius: 2px;
     background: var(--clr-primary);
     transition: .25s;
+    z-index: 1;
 }
 #navMenu input:checked ~ span:nth-child(2) {
     width: 0;
@@ -91,20 +94,21 @@ p {
 }
 #mobileMenu {
     position: fixed;
-    top: 50px;
-    left: -50%;
-    width: 50%;
+    top: 0;
+    left: 0;
+    width: auto;
     height: 100vh;
+    transform: translateX(-100%);
     transition: .25s;
 }
 #navMenu input:checked ~ #mobileMenu {
-    left: 0;
+    transform: translateX(0%);
 }
 #mobileNav {
     width: 100%;
     height: 100%;
     padding: 1rem;
-    padding-top: 20px;
+    padding-top: var(--navbar-height);
     gap: 1rem;
     backdrop-filter: blur(24px);
     box-shadow: inset 0 0 10px var(--clr-primary);
@@ -221,7 +225,7 @@ p {
     height: 16px;
     border-radius: 8px;
     background: var(--clr-mode-btn-tertiary);
-    transition: .25s;
+    /* transition: .25s; */
 }
 /* #changeMode input:checked ~ span {
     transform: translateX(50%);
@@ -285,21 +289,25 @@ h1 {
 }
 
 /* media */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
     .container {
-        padding: 10px;
+        padding: 20px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        font-size: .5rem;
+        font-size: .875rem;
+    }
+    hr {
+        width: 50%;
+        margin: 10px 0;
     }
 }
 @media screen and (min-width: 450px) {
-    .container {
+    /* .container {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
+    } */
     hr {
         width: 50%;
         margin: 10px 0;

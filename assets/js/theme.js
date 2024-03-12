@@ -1,13 +1,14 @@
-const root = document.querySelector(':root');
 const changeModeBtn = document.querySelector("#changeModeBtn");
 
 changeModeBtn.addEventListener("click", () => {
     const currentTheme = checkCurrentTheme();
+    document.querySelector("#changeModeSwitch").style.transition = ".25s";
     currentTheme === "dark" ? switchTheme("light") : switchTheme("dark");
 });
 
 const switchTheme = (theme) => {
     
+    const root = document.querySelector(':root');
     const themesSettings = {
         "light": {
             "colors": {
@@ -44,8 +45,8 @@ const switchTheme = (theme) => {
     }
     
     document.querySelector("#globe").style.filter = themesSettings[theme]["globe"];
-
     document.querySelector("#changeModeSwitch").style.transform = themesSettings[theme]["modeSwitch"];
+
     localStorage.setItem("theme", theme);
 };
 
