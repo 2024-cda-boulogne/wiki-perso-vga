@@ -3,7 +3,7 @@ const closeModalBtns = document.querySelectorAll(".closeModal ");
 
 aboutBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        
+
         const modal = document.querySelector("#aboutModal");
         modal.addEventListener("click", (e) => {
             if (e.target.id === "aboutModal")
@@ -16,12 +16,12 @@ aboutBtns.forEach(btn => {
             }
         });
 
-        modal.classList.toggle("hidden");
+        modal.classList.toggle("show");
     });
 });
 
 closeModalBtns.forEach(btn => {
     btn.addEventListener("click", () => {
-        document.querySelector(`#${btn.getAttribute("data-target")}`).classList.toggle("hidden");
+        document.querySelector(`#${btn.getAttribute("data-target")}`).classList.toggle("show");
     })
 });

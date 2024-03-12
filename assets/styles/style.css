@@ -147,7 +147,7 @@ li {
 }
 #mobileNav a p::before,
 #laptopNav a p::before,
-#laptopNav button::before,
+#laptopNav button:not(.about-btn)::before,
 .about-btn p::before {
     content: '';
     position: absolute;
@@ -242,11 +242,7 @@ li {
     height: 16px;
     border-radius: 8px;
     background: var(--clr-mode-btn-tertiary);
-    /* transition: .25s; */
 }
-/* #changeMode input:checked ~ span {
-    transform: translateX(50%);
-} */
 
 
 /* general */
@@ -332,6 +328,19 @@ h1 {
 .hidden {
     display: none;
 }
+.show {
+    display: flex !important;
+    animation: fade-in-from-top .25s linear forwards;
+}
+@keyframes fade-in-from-top {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
 
 /* modal */
 .modal {
@@ -340,7 +349,10 @@ h1 {
     left: 0;
     width: 100%;
     height: 100%;
+    display: none;
     background: rgba(0, 0, 0, .5);
+    transition: .25s;
+    opacity: 0;
     z-index: 99;
 }
 .modal-dialog {
