@@ -30,7 +30,7 @@
         <a id="logo" class="d-flex" href="index.html">
             <div id="globe"></div>
             <div id="logoText" class="d-flex flex-column justify-content-center">
-                <p>VivipediA</p>
+                <p>V<span class="fs-3">IVIPÉDI</span>A</p>
                 <p>Mon encyclopédie</p>
             </div>
         </a>
@@ -60,71 +60,145 @@
     </nav>
     <main class="container">
         <h1 class="mb-2">Commandes Git</h1>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git add</h2>
-        <p>Déplace les changements du répertoire de travail vers la zone de staging. Ceci vous permet de préparer un instantané avant de faire des commits dans l'historique officiel.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">branche git</h2>
-        <p>Cette commande est votre outil d'administration des branches à usage général. Elle vous permet de créer des environnements de développement isolés dans un dépôt unique.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git checkout</h2>
-        <p>En plus de faire un checkout des anciens commits et les anciennes révisions de fichier, git checkout permet également de parcourir les branches existantes. Associée aux commandes Git de base, elle permet de travailler sur une ligne de développement spécifique.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git clean</h2>
-        <p>Supprime les fichiers non trackés du répertoire de travail. Il s'agit d'une contrepartie logique à git reset qui ne fonctionne (généralement) que sur les fichiers trackés.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git clone</h2>
-        <p>Crée une copie d'un dépôt Git existant. Le clonage est le moyen le plus courant pour les développeurs d'obtenir une copie de travail d'un dépôt centralisé.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git commit</h2>
-        <p>Prend l'instantané stagé et en fait un commit dans l'historique du projet. Combinée à git add, cette commande définit le workflow de base pour tous les utilisateurs de Git.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git commit --amend</h2>
-        <p>Le fait de transmettre le flag --amend vers git commit vous permet de modifier le dernier commit. Ceci est très utile lorsque vous oubliez de stager un fichier ou des informations importantes dans le message de commit.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git config</h2>
-        <p>Une méthode simple pour définir les options de configuration pour votre installation Git. Généralement, vous n'aurez qu'à utiliser cette méthode après l'installation de Git sur un nouvel ordinateur de développement.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git fetch</h2>
-        <p>Durant le fetch, le système télécharge une branche dans un autre dépôt ainsi que tous les commits et les fichiers associés. Le process n'a pas pour objectif d'intégrer quoi que ce soit à votre dépôt local. Il vous permet d'inspecter les changements avant de les merger avec votre projet.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git init</h2>
-        <p>Lance un nouveau dépôt Git. Si vous souhaitez placer un projet sous contrôle de révision, c'est la première commande que vous devez apprendre.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git log</h2>
-        <p>Vous permet d'explorer les anciennes révisions d'un projet. Cette commande propose plusieurs options de formatage pour l'affichage des instantanés commités.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git merge</h2>
-        <p>Puissante méthode d'intégration des changements des branches divergentes. Après avoir forké l'historique du projet avec git branch, git merge vous permet de les réunir à nouveau.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git pull</h2>
-        <p>Le pull est une version automatisée de la commande git fetch. Il télécharge une branche à partir d'un dépôt distant, puis la merge immédiatement avec la branche courante. C'est l'équivalent, dans Git, de svn update.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git push</h2>
-        <p>Le push est le contraire du fetch (avec quelques mises en garde). Il vous permet de déplacer une branche locale dans un autre dépôt, ce qui est pratique pour publier des contributions. Il fonctionne comme un commit SVN, mais en envoyant une série de commits au lieu d'un ensemble de changements unique.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git rebase</h2>
-        <p>Le rebase vous permet de déplacer des branches, vous évitant ainsi les commits de merge inutiles. L'historique linéaire qui en résulte est souvent plus facile à comprendre et à explorer.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git rebase -i</h2>
-        <p>Le flag -i est utilisé pour commencer une session de rebase interactive. Vous bénéficiez ainsi de tous les avantages d'un rebase normal et vous pouvez également ajouter, éditer ou supprimer des commits.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git reflog</h2>
-        <p>Git garde une trace des mises à jour sur la pointe des branches à l'aide d'un mécanisme appelé reflog. Ainsi, vous pouvez revenir sur les ensembles de changements même s'ils ne sont pas référencés par une branche ou un tag.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git remote</h2>
-        <p>Un outil pratique pour gérer les connexions distantes. Il vous propose un raccourci pour éviter de transmettre l'URL entière dans les commandes de fetch, pull et push.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git reset</h2>
-        <p>Cette commande annule des changements apportés à des fichiers dans le répertoire de travail. Le reset vous permet d'effacer ou de supprimer complètement des changements qui n'ont pas été pushés vers un dépôt public.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git revert</h2>
-        <p>Cette commande annule un instantané à partir duquel des commits ont été faits. Lorsque vous découvrez un commit erroné, le revert est une méthode sûre et facile de le supprimer complètement de la base de code.</p>
-        <hr class="mt-5">
-        <h2 class="w-100 mb-2">git status</h2>
-        <p>Affiche l'état du répertoire de travail et l'instantané stagé. Vous voudrez sans doute l'exécuter conjointement avec git add et git commit pour voir exactement ce qui est inclus dans l'instantané suivant.</p>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git add</h2>
+            <p class="mb-5">
+                Déplace les changements du répertoire de travail vers la zone de staging. Ceci vous permet de préparer un instantané avant de faire des commits dans l'historique officiel.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">branche git</h2>
+            <p class="mb-5">
+                Cette commande est votre outil d'administration des branches à usage général. Elle vous permet de créer des environnements de développement isolés dans un dépôt unique.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git checkout</h2>
+            <p class="mb-5">
+                En plus de faire un checkout des anciens commits et les anciennes révisions de fichier, git checkout permet également de parcourir les branches existantes.
+                Associée aux commandes Git de base, elle permet de travailler sur une ligne de développement spécifique.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git clean</h2>
+            <p class="mb-5">
+                Supprime les fichiers non trackés du répertoire de travail. Il s'agit d'une contrepartie logique à git reset qui ne fonctionne (généralement) que sur les fichiers trackés.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git clone</h2>
+            <p class="mb-5">
+                Crée une copie d'un dépôt Git existant. Le clonage est le moyen le plus courant pour les développeurs d'obtenir une copie de travail d'un dépôt centralisé.
 
-
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git commit</h2>
+            <p class="mb-5">
+                Prend l'instantané stagé et en fait un commit dans l'historique du projet. Combinée à git add, cette commande définit le workflow de base pour tous les utilisateurs de Git.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git commit --amend</h2>
+            <p class="mb-5">
+                Le fait de transmettre le flag --amend vers git commit vous permet de modifier le dernier commit.
+                Ceci est très utile lorsque vous oubliez de stager un fichier ou des informations importantes dans le message de commit.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git config</h2>
+            <p class="mb-5">
+                Une méthode simple pour définir les options de configuration pour votre installation Git.
+                Généralement, vous n'aurez qu'à utiliser cette méthode après l'installation de Git sur un nouvel ordinateur de développement.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git fetch</h2>
+            <p class="mb-5">
+                Durant le fetch, le système télécharge une branche dans un autre dépôt ainsi que tous les commits et les fichiers associés.
+                Le process n'a pas pour objectif d'intégrer quoi que ce soit à votre dépôt local. Il vous permet d'inspecter les changements avant de les merger avec votre projet.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git init</h2>
+            <p class="mb-5">Lance un nouveau dépôt Git. Si vous souhaitez placer un projet sous contrôle de révision, c'est la première commande que vous devez apprendre.</p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git log</h2>
+            <p class="mb-5">
+                Vous permet d'explorer les anciennes révisions d'un projet. Cette commande propose plusieurs options de formatage pour l'affichage des instantanés commités.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git merge</h2>
+            <p class="mb-5">
+                Puissante méthode d'intégration des changements des branches divergentes. Après avoir forké l'historique du projet avec git branch, git merge vous permet de les réunir à nouveau.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git pull</h2>
+            <p class="mb-5">
+                Le pull est une version automatisée de la commande git fetch. Il télécharge une branche à partir d'un dépôt distant, puis la merge immédiatement avec la branche courante.
+                C'est l'équivalent, dans Git, de svn update.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git push</h2>
+            <p class="mb-5">
+                Le push est le contraire du fetch (avec quelques mises en garde).
+                Il vous permet de déplacer une branche locale dans un autre dépôt, ce qui est pratique pour publier des contributions.
+                Il fonctionne comme un commit SVN, mais en envoyant une série de commits au lieu d'un ensemble de changements unique.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git rebase</h2>
+            <p class="mb-5">
+                Le rebase vous permet de déplacer des branches, vous évitant ainsi les commits de merge inutiles.
+                L'historique linéaire qui en résulte est souvent plus facile à comprendre et à explorer.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git rebase -i</h2>
+            <p class="mb-5">
+                Le flag -i est utilisé pour commencer une session de rebase interactive.
+                Vous bénéficiez ainsi de tous les avantages d'un rebase normal et vous pouvez également ajouter, éditer ou supprimer des commits.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git reflog</h2>
+            <p class="mb-5">
+                Git garde une trace des mises à jour sur la pointe des branches à l'aide d'un mécanisme appelé reflog.
+                Ainsi, vous pouvez revenir sur les ensembles de changements même s'ils ne sont pas référencés par une branche ou un tag.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git remote</h2>
+            <p class="mb-5">
+                Un outil pratique pour gérer les connexions distantes.
+                Il vous propose un raccourci pour éviter de transmettre l'URL entière dans les commandes de fetch, pull et push.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git reset</h2>
+            <p class="mb-5">
+                Cette commande annule des changements apportés à des fichiers dans le répertoire de travail.
+                Le reset vous permet d'effacer ou de supprimer complètement des changements qui n'ont pas été pushés vers un dépôt public.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git revert</h2>
+            <p class="mb-5">
+                Cette commande annule un instantané à partir duquel des commits ont été faits.
+                Lorsque vous découvrez un commit erroné, le revert est une méthode sûre et facile de le supprimer complètement de la base de code.
+            </p>
+        </section>
+        <section>
+            <h2 class="w-100 mt-5 mb-5">git status</h2>
+            <p class="mb-5">
+                Affiche l'état du répertoire de travail et l'instantané stagé.
+                Vous voudrez sans doute l'exécuter conjointement avec git add et git commit pour voir exactement ce qui est inclus dans l'instantané suivant.
+            </p>
+        </section>
     </main>
     <footer>
 
