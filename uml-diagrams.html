@@ -65,14 +65,14 @@
     </nav>
     <main class="container">
         <section class="page-index-panel">
-            <p class="p-index-title mb-5"><b>Sommaire</b><button class="ms-3">Masquer</button></p>
+            <p class="p-index-title mb-5"><b>Sommaire</b><button class="ms-3" id="index-panel-hide-btn">Masquer</button></p>
             <a class="page-index-start mt-3 mb-5" href="#page-start">Début</a>
             <a class="mb-5" href="#definition">Définition de l'UML</a>
             <a class="mb-5" href="#sequence-diagram">Diagramme de séquence</a>
             <a class="mb-5" href="#use-case-diagram">Diagramme de cas d'utilisation</a>
             <a class="mb-5" href="#activity-diagram">Diagramme d'activité</a>
             <a class="mb-5" href="#deployment-diagram">Diagramme de déploiement</a>
-            <a class="mb-4" href="#class-diagram">Diagramme de classes</a>
+            <a class="mb-5" href="#class-diagram">Diagramme de classes</a>
             <a class="mb-5 ps-4" href="#class-schema">Schéma d'une classe</a>
             <a class="mb-5 ps-4" href="#class-name">Première partie : le nom de la classe</a>
             <a class="mb-5 ps-4" href="#class-attributes">Seconde partie : les attributs</a>
@@ -91,7 +91,10 @@
             <a class="mb-5 ps-4" href="#class-dependency">Dépendance</a>
         </section>
         <section class="page-content" id="page-start">
-            <h1 class="mt-5 mb-3">Diagrammes UML</h1>
+            <header class="d-flex align-items-center w-100 mt-5 mb-3">
+                <nav class="nav-minified-btn"></nav>
+                <h1>Diagrammes UML</h1>
+            </header>
             <section>
                 <h2 class="w-100 mt-5 mb-5" id="definition">Définition de l'UML</h2>
                 <p class="mb-5">
@@ -390,6 +393,7 @@
             </div>
         </div>
     </div>
+    <script src="/assets/js/index-panel.js"></script>
     <script src="/assets/js/themes.js"></script>
     <script src="/assets/js/modal.js"></script>
 </body>
