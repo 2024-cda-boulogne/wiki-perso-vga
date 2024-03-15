@@ -6,9 +6,9 @@ aboutBtns.forEach(btn => {
 
         const modal = document.querySelector("#aboutModal");
         modal.addEventListener("click", (e) => {
-            if (e.target.id === "aboutModal")
+            const modalDialog = modal.childNodes[1];
+            if (e.target.id === "aboutModal" && modalDialog.classList.contains("highlight-modal") === false)
             {
-                const modalDialog = modal.childNodes[1];
                 modalDialog.classList.add("highlight-modal");
                 setTimeout(() => {
                     modalDialog.classList.remove("highlight-modal");
