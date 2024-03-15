@@ -5,7 +5,7 @@ footer {
     justify-content: center;
     align-items: center;
     min-height: 200px;
-    padding: 40px 50px 40px;
+    padding-top: 80px;
     margin: 0 auto;
     gap: 15px;
 }
@@ -21,8 +21,7 @@ footer a {
     font-weight: 600;
 }
 .logo-simplon {
-    width: 69px;
-    height: 69px;
-    background-image: url(/assets/styles/images/logo-simplon.png);
+    width: 69px !important;
+    height: 69px !important;
     background-size: contain;
 }
