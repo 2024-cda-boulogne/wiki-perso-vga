@@ -1,0 +1,22 @@
+{
+  "name": "wiki-perso-vga",
+  "version": "1.0.0",
+  "description": "personnal wiki",
+  "main": "index.html",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss src/styles.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/2024-cda-boulogne/wiki-perso-vga.git"
+  },
+  "author": "Vivien Gajac",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/2024-cda-boulogne/wiki-perso-vga/issues"
+  },
+  "homepage": "https://github.com/2024-cda-boulogne/wiki-perso-vga#readme",
+  "devDependencies": {
+    "sass": "^1.72.0"
+  }
+}

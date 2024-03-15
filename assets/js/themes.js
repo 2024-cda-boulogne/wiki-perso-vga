@@ -10,7 +10,7 @@ const switchTheme = (theme) => {
     const root = document.querySelector(':root');
     const themesSettings = {
         "light": {
-            "globe":                   "none",
+            "image-transform":         "none",
             "modeSwitch":              "translateX(50%)",
             "colors": {
                 "primary":             "#111",
@@ -28,7 +28,7 @@ const switchTheme = (theme) => {
             },
         },
         "dark": {
-            "globe":                   "invert(1)",
+            "image-transform":         "invert(1)",
             "modeSwitch":              "translateX(-50%)",
             "colors": {
                 "primary":             "#eee",
@@ -47,7 +47,8 @@ const switchTheme = (theme) => {
         },
     };
     
-    document.querySelector("#globe").style.filter = themesSettings[theme]["globe"];
+    document.querySelector("#globe").style.filter = themesSettings[theme]["image-transform"];
+    document.querySelector(".nav-minified-btn").style.filter = themesSettings[theme]["image-transform"];
     document.querySelector("#changeModeSwitch").style.transform = themesSettings[theme]["modeSwitch"];
     for (const [key, value] of Object.entries(themesSettings[theme]["colors"])) {
         root.style.setProperty(`--clr-${key}`, `${value}`);

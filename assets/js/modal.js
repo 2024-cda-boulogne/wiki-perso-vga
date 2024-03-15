@@ -1,5 +1,5 @@
 const aboutBtns = document.querySelectorAll(".about-btn");
-const closeModalBtns = document.querySelectorAll(".closeModal ");
+const closeModalBtns = document.querySelectorAll(".close-modal ");
 
 aboutBtns.forEach(btn => {
     btn.addEventListener("click", () => {

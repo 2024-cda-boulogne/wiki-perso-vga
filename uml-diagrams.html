@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VivipediA</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
     <nav class="mainNav d-flex justify-content-between align-items-center">
@@ -106,7 +106,7 @@
                     Les différents éléments représentables sont : 
                 </p>
                 <ul class="mb-5 ps-6">
-                    <li>Activité d'un objet/logiciel</li>
+                    <li>Activité d'un objet / logiciel</li>
                     <li>Acteurs</li>
                     <li>Processus</li>
                     <li>Schéma de base de données</li>
@@ -375,20 +375,36 @@
         </section>
     </main>
     <footer>
-
+        <img class="logo-simplon" src="/assets/styles/images/logo-simplon.png" alt="Logo de Simplon">
+        <p class="text-center">Made@Simplon</p>
     </footer>
     <div id="aboutModal" class="modal hidden d-flex centered">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header d-flex justify-content-between">
                     <p>À propos</p>
-                    <div class="closeModal d-flex centered" data-target="aboutModal">
+                    <div class="close-modal close-modal-cross d-flex centered" data-target="aboutModal">
                         <span></span>
                     </div>
                 </div>
                 <hr>
                 <div class="modal-body">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, natus laboriosam. Sapiente ipsam facere ex quos, magni, minus repellendus ut dolorem quidem similique nesciunt eligendi, recusandae asperiores. Architecto, quo distinctio?</p>
+                    <p class="mt-5 mb-5">Hello World !</p>
+                    <p class="mb-3">Je m'appelle Vivien et je prépare actuellement un titre de</p>
+                    <p><b>C</b>oncepteur<b>
+                    <p>D</b>éveloppeur d'</p>
+                    <p class="mb-3"><b>A</b>pplications</p>
+                    <p class="mb-5">chez Simplon à Boulogne-sur-Mer.</p>
+                    <p class="mb-2">Mes langages de prédilection ?</p>
+                    <ul class="mb-5 ps-6">
+                        <li><b>HTML / CSS / Javascript</b></li>
+                        <li><b>PHP</b></li>
+                    </ul>
+                    <p>Mon framework préféré ?</p>
+                    <p>Symfony</p>
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="close-modal close-modal-btn" data-target="aboutModal">Fermer</button>
                 </div>
             </div>
         </div>
