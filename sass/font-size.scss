@@ -1,0 +1,49 @@
+#font-size-btn {
+    margin-right: .2rem;
+    border: none;
+    background: none;
+    color: var(--clr-links);
+    cursor: pointer;
+}
+#font-size-btn:hover {
+    color: var(--clr-links-active);
+}
+.settings {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 100%;
+    right: 0;
+    margin-top: .5rem;
+    padding: .5rem 1rem;
+    background: var(--clr-secondary);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 5px;
+    z-index: 97;
+}
+.setting-fs {
+    user-select: none;
+    p:first-child {
+        width: auto;
+        text-align: left;
+        white-space: nowrap;
+    }
+    button {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        border: none;
+        background: none;
+        font-size: 1.4rem;
+        color: var(--clr-primary);
+        cursor: pointer;
+
+        &:hover {
+            color: var(--clr-links);
+        }
+    }
+    button:last-child {
+        padding-bottom: 4px;
+    }
+}

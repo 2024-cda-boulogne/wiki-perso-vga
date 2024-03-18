@@ -1,0 +1,215 @@
+@use 'vars';
+
+.mainNav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--navbar-height);
+    margin: 0 auto;
+    padding: 0 10px;
+    background-color: var(--clr-secondary);
+    z-index: 98;
+}
+#globe {
+    width: 50px;
+    height: 50px;
+    background-image: url(assets/styles/images/globe.png);
+    background-size: contain;
+}
+#logo {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+#logo p,
+#logo span {
+    font-family: 'HoeflerText';
+    font-weight: 500;
+    line-height: .875rem;
+    letter-spacing: .05rem;
+    white-space: nowrap;
+}
+#logo p:nth-child(1) {
+    font-size: 1.6em;
+}
+#logo p:nth-child(2) {
+    font-size: .8em;
+    color: var(--clr-mode-btn-tertiary);
+}
+#navMenu {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    z-index: 99;
+}
+#navMenu input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+#navMenu span {
+    position: absolute;
+    width: 28px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--clr-primary);
+    transition: .25s;
+    z-index: 1;
+}
+#navMenu input:checked ~ span:nth-child(2) {
+    width: 0;
+}
+#navMenu span:nth-child(3) {
+    transform: translateY(7px);
+}
+#navMenu span:nth-child(4) {
+    transform: translateY(-7px);
+}
+#navMenu input:checked ~ span:nth-child(3) {
+    transform: rotate(45deg);
+}
+#navMenu input:checked ~ span:nth-child(4) {
+    transform: rotate(-45deg);
+}
+#mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: .25s;
+}
+#navMenu input:checked ~ #mobileMenu {
+    transform: translateX(0%);
+}
+#mobileNav {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0;
+    padding-top: var(--navbar-height);
+    backdrop-filter: blur(12px);
+    box-shadow: inset 0 0 100px var(--clr-secondary);
+    border-right: 1px solid var(--clr-primary);
+}
+#mobileNav .nav-title {
+    color: var(--clr-primary);
+    font-size: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+#mobileNav a,
+#mobileNav button {
+    display: flex;
+    padding: 0 1rem;
+}
+#mobileNav a,
+#mobileNav button {
+    justify-content: flex-start !important;
+}
+#mobileNav hr {
+    margin: 0 auto;
+}
+#mobileNav a,
+#mobileNav a p,
+#laptopNav a,
+#laptopNav a p,
+.dropdown-btn p,
+.about-btn p {
+    position: relative;
+    width: auto;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--clr-links);
+    user-select: none;
+}
+#mobileNav a,
+#laptopNav a,
+.dropdown-btn,
+.about-btn {
+    min-width: 90px;
+    height: var(--navbar-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#mobileNav a:hover,
+#laptopNav a:hover,
+#laptopNav button:hover,
+.about-btn:hover {
+    background: var(--clr-links-hover);
+}
+#mobileNav a p::before,
+#laptopNav a p::before,
+#laptopNav button:not(.about-btn) p::before,
+.about-btn p::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    right: 0;
+    background: var(--clr-links);
+    transition: .25s;
+}
+#mobileNav a:hover p::before,
+#laptopNav a:hover p::before,
+#laptopNav button:hover p::before,
+.about-btn:hover p::before {
+    width: 100%;
+    left: 0;
+}
+#laptopNav {
+    height: 100%;
+    display: none;
+    align-items: center;
+}
+#laptopNav a {
+    width: 100%;
+}
+#laptopNav a,
+#laptopNav button {
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 0 5px;
+}
+.dropdown {
+    position: relative;
+}
+.dropdown-btn,
+.about-btn {
+    height: var(--navbar-height);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.about-btn p {
+    width: fit-content;
+    cursor: pointer;
+}
+.dropdown-content {
+    position: absolute;
+    width: 100%;
+    display: none;
+    background: var(--clr-secondary);
+}
+.dropdown-content a {
+    height: var(--navbar-height);
+    display: block;
+    padding-top: 3px !important;
+}
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+.link-active::before,
+.link-active p::before  {
+    width: 100% !important;
+    background: var(--clr-links-active) !important;
+}
+.link-active p {
+    color: var(--clr-links-active) !important;
+}

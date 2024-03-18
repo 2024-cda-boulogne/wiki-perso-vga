@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="8cm" height="3cm" viewBox="0 0 154 46" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="1" y="1" width="151.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1" y="1" width="151.6" height="28"/>
+    <text style="fill: #000000;text-anchor:middle;font-size:16;font-family:sanserif;font-style:italic;font-weight:700" x="76.8" y="20">ClasseAbstraite</text>
+    <rect style="fill: #ffffff" x="1" y="29" width="151.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1" y="29" width="151.6" height="8"/>
+    <rect style="fill: #ffffff" x="1" y="37" width="151.6" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="1" y="37" width="151.6" height="8"/>
+  </g>
+</svg>

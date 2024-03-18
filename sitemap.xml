@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="https://github.com/2024-cda-boulogne/wiki-perso-vga/sitemap.xml/1.0">
+
+   <url>
+      <loc>https://github.com/2024-cda-boulogne/wiki-perso-vga/index.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>1</priority>
+   </url>
+   
+   <url>
+      <loc>https://github.com/2024-cda-boulogne/wiki-perso-vga/git-commands.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>never</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>https://github.com/2024-cda-boulogne/wiki-perso-vga/uml.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>never</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>https://github.com/2024-cda-boulogne/wiki-perso-vga/merise.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>never</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <url>
+      <loc>https://github.com/2024-cda-boulogne/wiki-perso-vga/javascript.html</loc>
+      <lastmod>2024-03-18</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+</urlset>

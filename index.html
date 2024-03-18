@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivipediA</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <title>Accueil — VivipédiA</title>
+    <meta name="description" content="Wiki Développeur Web">
+    <meta name="keywords" content="Git, UML, MERISE, HTML, CSS, JS">
+    <meta name="author" content="Vivien Gajac">
+    <meta name="twitter:card" content="home">
+    <meta name="twitter:site" content="Wiki Développeur Web">
+    <meta name="twitter:title" content="Page d'accueil">
+    <meta name="twitter:description" content="Bienvenue sur la page d'accueil de VivipédiA">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="mainNav d-flex justify-content-between align-items-center">
@@ -15,20 +23,22 @@
             <span></span>
             <div id="mobileMenu">
                 <nav id="mobileNav" class="d-flex flex-column">
-                    <h3>Menu principal</h3>
+                    <p class="nav-title w-100"><b>Menu principal</b></p>
                     <a href="index.html" class="link-active"><p>Accueil</p></a>
                     <hr>
-                    <a href="git-commands.html"><p>Github</p></a>
+                    <a href="git-commands.html"><p>Commandes Git</p></a>
                     <a href="uml-diagrams.html"><p>Diagrammes UML</p></a>
                     <a href="merise-method.html"><p>Méthode Merise</p></a>
                     <a href="javascript.html"><p>Javascript</p></a>
+                    <hr>
+                    <button class="about-btn"><p>À propos</p></button>
                 </nav>
             </div>
         </div>
         <a id="logo" class="d-flex" href="index.html">
             <div id="globe"></div>
             <div id="logoText" class="d-flex flex-column justify-content-center">
-                <p>VivipediA</p>
+                <p id="logoTitle">V<span class="fs-3">IVIPÉDI</span>A</p>
                 <p>Mon encyclopédie</p>
             </div>
         </a>
@@ -47,22 +57,80 @@
                     <a href="merise-method.html"><p>Merise</p></a>
                 </div>
             </div>
-            <a href="javascript.html"><p>Javascript</p></a>
+            <div class="dropdown">
+                <button class="dropdown-btn"><p>Langages</p></button>
+                <div class="dropdown-content">
+                    <a href="javascript.html"><p>Javascript</p></a>
+                </div>
+            </div>
+            <button class="about-btn"><p>À propos</p></button>
         </div>
-        <div id="changeMode">
+        <button id="changeMode">
             <input id="changeModeBtn" type="checkbox">
             <div id="changeModeBox"></div>
             <span id="changeModeSwitch"></span>
-        </div>
+        </button>
     </nav>
     <main class="container">
-        <h1>Bienvenue sur VivipediA</h1>
-        <hr>
-
+        <section class="page-content h-100 align-item-center">
+            <header class="d-flex align-items-center w-100 mt-5 mb-3">
+                <nav class="nav-minified-btn"></nav>
+                <h1>Bienvenue sur VivipédiA</h1>
+                <button class="ms-auto" id="font-size-btn">Réglages</button>
+                <div class="settings hidden">
+                    <div class="setting-fs d-flex align-items-center gap-3">
+                        <p>Taille de police :</p>
+                        <p id="currentFontSize"></p>
+                        <button id="fs-increase">+</button>
+                        <button id="fs-decrease">-</button>
+                    </div>
+                </div>
+            </header>
+            <section class="flex-grow-1 justify-content-center">
+                <p class="mt-5 mb-5">Ce site rassemble des informations à propos du développement web à partir de diverses sources.</p>
+                <p class="mb-5">J'y consignerai également du code personnel, comme des classes ou des fonctions réutilisables, dans les différents langages présentés dans la partie <b>Langages</b>.</p>
+                <p class="mb-5">Bonne visite !</p>
+            </section>
+            <footer>
+                <img class="logo-simplon" src="src/assets/styles/images/logo-simplon.png" alt="Logo de Simplon">
+                <p class="text-center">Made@Simplon</p>
+            </footer>
+        </section>
     </main>
-    <footer>
-
-    </footer>
-    <script src="/assets/js/themes.js"></script>
+    <div id="aboutModal" class="modal d-flex centered">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <p>À propos</p>
+                    <div class="close-modal close-modal-cross d-flex centered" data-target="aboutModal">
+                        <span></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-body">
+                    <p class="mt-5 mb-5">Hello World !</p>
+                    <p class="mb-3">Je m'appelle Vivien et je prépare actuellement un titre de</p>
+                    <p><b>C</b>oncepteur<b>
+                    <p>D</b>éveloppeur d'</p>
+                    <p class="mb-3"><b>A</b>pplications</p>
+                    <p class="mb-5">chez Simplon à Boulogne-sur-Mer.</p>
+                    <p class="mb-2">Mes langages de prédilection ?</p>
+                    <ul class="mb-5 ps-6">
+                        <li><b>HTML / CSS / Javascript</b></li>
+                        <li><b>PHP</b></li>
+                    </ul>
+                    <p>Mon framework préféré ?</p>
+                    <p>Symfony</p>
+                </div>
+                <hr>
+                <div class="modal-footer d-flex">
+                    <button class="close-modal close-modal-btn" data-target="aboutModal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/assets/js/themes.js"></script>
+    <script src="src/assets/js/modal.js"></script>
+    <script src="src/assets/js/font-size.js"></script>
 </body>
 </html>

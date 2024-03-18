@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivipediA</title>
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <title>Commandes Git — VivipédiA</title>
+    <meta name="description" content="Wiki Développeur Web">
+    <meta name="keywords" content="Commandes GIT">
+    <meta name="author" content="Vivien Gajac">
+    <meta name="twitter:card" content="git commands">
+    <meta name="twitter:site" content="Wiki Développeur Web">
+    <meta name="twitter:title" content="Commandes Git">
+    <meta name="twitter:description" content="Présentation des principales commandes Git">
+    <link rel="stylesheet" href="src/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
     <nav class="mainNav d-flex justify-content-between align-items-center">
@@ -15,20 +23,22 @@
             <span></span>
             <div id="mobileMenu">
                 <nav id="mobileNav" class="d-flex flex-column">
-                    <h3>Menu principal</h3>
+                    <p class="nav-title w-100"><b>Menu principal</b></p>
                     <a href="index.html"><p>Accueil</p></a>
                     <hr>
-                    <a href="git-commands.html" class="link-active"><p>GitHub</p></a>
+                    <a href="git-commands.html" class="link-active"><p>Commandes Git</p></a>
                     <a href="uml-diagrams.html"><p>Diagrammes UML</p></a>
                     <a href="merise-method.html"><p>Méthode Merise</p></a>
                     <a href="javascript.html"><p>Javascript</p></a>
+                    <hr>
+                    <button class="about-btn"><p>À propos</p></button>
                 </nav>
             </div>
         </div>
         <a id="logo" class="d-flex" href="index.html">
             <div id="globe"></div>
             <div id="logoText" class="d-flex flex-column justify-content-center">
-                <p>VivipediA</p>
+                <p id="logoTitle">V<span class="fs-3">IVIPÉDI</span>A</p>
                 <p>Mon encyclopédie</p>
             </div>
         </a>
@@ -37,7 +47,7 @@
             <div class="dropdown">
                 <button class="dropdown-btn link-active"><p>GitHub</p></button>
                 <div class="dropdown-content">
-                    <a href="git-commands.html"><p>Commandes</p></a>
+                    <a class="link-active" href="git-commands.html"><p>Commandes</p></a>
                 </div>
             </div>
             <div class="dropdown">
@@ -47,23 +57,299 @@
                     <a href="merise-method.html"><p>Merise</p></a>
                 </div>
             </div>
-            <a href="javascript.html"><p>Javascript</p></a>
+            <div class="dropdown">
+                <button class="dropdown-btn"><p>Langages</p></button>
+                <div class="dropdown-content">
+                    <a href="javascript.html"><p>Javascript</p></a>
+                </div>
+            </div>
+            <button class="about-btn"><p>À propos</p></button>
         </div>
-        <div id="changeMode">
+        <button id="changeMode">
             <input id="changeModeBtn" type="checkbox">
             <div id="changeModeBox"></div>
             <span id="changeModeSwitch"></span>
-        </div>
+        </button>
     </nav>
     <main class="container">
-        <h1>Commandes Git</h1>
-        <hr>
-        <h2 class="mb-3">git clone</h2>
-        <p>Crée une copie d'un dépôt Git existant. Le clonage est le moyen le plus courant pour les développeurs d'obtenir une copie de travail d'un dépôt centralisé.</p>
-    </main>
-    <footer>
+        <section class="page-index-panel">
+            <p class="p-index-title mb-5"><b>Sommaire</b><button class="ms-3" id="index-panel-hide-btn">Masquer</button></p>
+            <a class="page-index-start mt-3 mb-5" href="#page-start">Début</a>
+            <a class="mb-5" href="#git-add">git add</a>
+            <a class="mb-5" href="#git-commmit">git commmit</a>
+            <a class="mb-5" href="#git-push">git push</a>
+            <a class="mb-5" href="#git-pull">git pull</a>
+            <a class="mb-5" href="#git-branch">git branch</a>
+            <a class="mb-5 ps-4" href="#git-fetch">git fetch</a>
+            <a class="mb-5 ps-4" href="#git-checkout">git checkout</a>
+            <a class="mb-5 ps-4" href="#git-merge">git merge</a>
+            <a class="mb-5" href="#git-clean">git clean</a>
+            <a class="mb-5" href="#git-clone">git clone</a>
+            <a class="mb-5" href="#git-commmit-amend">git commit --amend</a>
+            <a class="mb-5" href="#git-config">git config</a>
+            <a class="mb-5" href="#git-init">git init</a>
+            <a class="mb-5" href="#git-log">git log</a>
+            <a class="mb-5" href="#git-rebase">git rebase</a>
+            <a class="mb-5" href="#git-rebase-i">git rebase --i</a>
+            <a class="mb-5" href="#git-reflog">git reflog</a>
+            <a class="mb-5" href="#git-remote">git remote</a>
+            <a class="mb-5" href="#git-reset">git reset</a>
+            <a class="mb-5" href="#git-revert">git revert</a>
+            <a class="mb-5" href="#git-status">git status</a>
+        </section>
+        <section class="page-content ms-5" id="page-start">
+            <header class="d-flex align-items-center w-100 mt-5 mb-3">
+                <nav class="nav-minified-btn"></nav>
+                <h1>Commandes Git</h1>
+                <button class="ms-auto" id="font-size-btn">Réglages</button>
+                <div class="settings hidden">
+                    <div class="setting-fs d-flex align-items-center gap-3">
+                        <p>Taille de police :</p>
+                        <p id="currentFontSize"></p>
+                        <button id="fs-increase">+</button>
+                        <button id="fs-decrease">-</button>
+                    </div>
+                </div>
+            </header>
+            <section>
+                <h2 class="w-100 mt-5 mb-5" id="git-add">Git Add : Ajouter des fichiers au dépôt</h2>
+                <p class="mb-5">
+                    La première commande que vous devriez apprendre est git add.
+                    Cette commande permet d’ajouter des fichiers à l’index (un espace de travail intermédiaire) de Git,
+                    ce qui signifie qu’ils seront inclus dans le prochain commit.
+                    Vous pouvez ajouter un fichier spécifique en utilisant la commande :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git add nom_du_fichier</p>
+                </div>
+                <p class="mb-5">
+                    Ou tous les fichiers dans le répertoire courant en utilisant :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git add .</p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-commmit">Git Commit : Enregistrer les modifications dans l'historique</h2>
+                <p class="mb-5">
+                    Une fois que vous avez ajouté des fichiers à l’index, vous pouvez enregistrer les modifications dans l’historique de Git en utilisant la commande <b>git commit</b>.
+                    Cette commande prend un message qui décrit les modifications que vous avez apportées. Par exemple :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git commit -m <span>"Ajout de la fonctionnalité X"</span></p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-push">Git Push : Envoyer les modifications sur le dépôt</h2>
+                <p class="mb-5">
+                    Une fois que vous avez enregistré des modifications dans l’historique de votre dépôt local, vous pouvez envoyer ces modifications sur le dépôt distant en utilisant la commande git push.
+                    Cette commande envoie les commits de votre dépôt local vers le dépôt distant. Par exemple :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git push origin nom_de_votre_branche</p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-pull">Git Pull : Récupérer les modifications du dépôt</h2>
+                <p class="mb-5">
+                    Si d’autres personnes ont apporté des modifications au dépôt distant, vous pouvez récupérer ces modifications sur votre ordinateur en utilisant la commande git pull.
+                    Cette commande récupère les commits du dépôt distant et les fusionne dans votre dépôt local. Par exemple :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git pull origin nom_de_votre_branche</p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-branch">Git Branch</h2>
+                <p class="mb-5">
+                    Lorsque vous travaillez sur un projet en équipe, il est important de pouvoir gérer les modifications en parallèle et de résoudre les conflits éventuels.
+                    Les branches de Git vous permettent de faire cela en créant des versions séparées de votre projet qui peuvent être modifiées indépendamment les unes des autres.
+                </p>
+                <h3 class="w-100 mb-5" id="git-fetch">Récupérer les branches depuis GitHub/GitLab</h3>
+                <p class="mb-5">
+                    Il est également possible de récupérer les branches créées par d’autres collaborateurs sur GitHub ou GitLab.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git fetch origin nom_de_la_branche</p>
+                </div>
+                <p class="mb-5">
+                    Il est possible de récupérer toutes les branches d’un coup en utilisant la commande git <b>fetch --all</b>.
+                    Cette commande va récupérer toutes les branches du dépôt distant sur votre ordinateur, mais n’en fusionnera aucune automatiquement. 
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git fetch --all</p>
+                </div>
+                <p class="mb-5">
+                    Vous devrez ensuite utiliser la commande <b>git merge</b> pour fusionner les branches récupérées avec vos branches locales.
+                    Il est également possible de spécifier <b>--prune</b> pour supprimer les branches distantes qui n’existent plus.
+                    Il est donc important de bien comprendre les conséquences de cette commande avant de l’utiliser.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git merge</p>
+                </div>
+                <h3 class="w-100 mb-5">Créer une nouvelle branche</h3>
+                <p class="mb-5">
+                    Avant de pouvoir travailler sur une nouvelle fonctionnalité ou de corriger un bug, vous pouvez créer une nouvelle branche à partir de la branche principale.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git branch nom_de_la_branche</p>
+                </div>
+                <h3 class="w-100 mb-5" id="git-checkout">Passer à une autre branche</h3>
+                <p class="mb-5">
+                    Une fois que vous avez créé une nouvelle branche, vous devez vous déplacer sur cette branche pour pouvoir y travailler.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git checkout nom_de_la_branche</p>
+                </div>
+                <h3 class="w-100 mb-5" id="git-merge">Fusionner les branches</h3>
+                <p class="mb-5">
+                    Une fois que vous avez terminé de travailler sur une branche, vous pouvez fusionner les modifications de cette branche avec la branche principale.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git merge nom_de_la_branche</p>
+                </div>
+                <p class="mb-5">
+                    En utilisant les branches de Git, vous pouvez facilement gérer les modifications en parallèle et résoudre les conflits éventuels lorsque vous travaillez en équipe sur un projet.
+                </p>
+            </section>
+ 
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-clean">git clean</h2>
+                <p class="mb-5">
+                    Supprime les fichiers non trackés du répertoire de travail. Il s'agit d'une contrepartie logique à git reset qui ne fonctionne (généralement) que sur les fichiers trackés.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-clone">git clone</h2>
+                <p class="mb-5">
+                    Crée une copie d'un dépôt Git existant. Le clonage est le moyen le plus courant pour les développeurs d'obtenir une copie de travail d'un dépôt centralisé.
 
-    </footer>
-    <script src="/assets/js/themes.js"></script>
+                </p>
+            </section>
+
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-commit-amend">git commit --amend</h2>
+                <p class="mb-5">
+                    Le fait de transmettre le flag --amend vers git commit vous permet de modifier le dernier commit.
+                    Ceci est très utile lorsque vous oubliez de stager un fichier ou des informations importantes dans le message de commit.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-config">git config</h2>
+                <p class="mb-5">
+                    Une méthode simple pour définir les options de configuration pour votre installation Git.
+                    Généralement, vous n'aurez qu'à utiliser cette méthode après l'installation de Git sur un nouvel ordinateur de développement.
+                </p>
+            </section>
+
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-init">git init</h2>
+                <p class="mb-5">Lance un nouveau dépôt Git. Si vous souhaitez placer un projet sous contrôle de révision, c'est la première commande que vous devez apprendre.</p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-log">git log</h2>
+                <p class="mb-5">
+                    Vous permet d'explorer les anciennes révisions d'un projet. Cette commande propose plusieurs options de formatage pour l'affichage des instantanés commités.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-rebase">git rebase</h2>
+                <p class="mb-5">
+                    Le rebase vous permet de déplacer des branches, vous évitant ainsi les commits de merge inutiles.
+                    L'historique linéaire qui en résulte est souvent plus facile à comprendre et à explorer.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-rebase-i">git rebase -i</h2>
+                <p class="mb-5">
+                    Le flag -i est utilisé pour commencer une session de rebase interactive.
+                    Vous bénéficiez ainsi de tous les avantages d'un rebase normal et vous pouvez également ajouter, éditer ou supprimer des commits.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-reflog">git reflog</h2>
+                <p class="mb-5">
+                    Git garde une trace des mises à jour sur la pointe des branches à l'aide d'un mécanisme appelé reflog.
+                    Ainsi, vous pouvez revenir sur les ensembles de changements même s'ils ne sont pas référencés par une branche ou un tag.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-remote">git remote</h2>
+                <p class="mb-5">
+                    Un outil pratique pour gérer les connexions distantes.
+                    Il vous propose un raccourci pour éviter de transmettre l'URL entière dans les commandes de fetch, pull et push.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-reset">git reset</h2>
+                <p class="mb-5">
+                    Cette commande annule des changements apportés à des fichiers dans le répertoire de travail.
+                    Le reset vous permet d'effacer ou de supprimer complètement des changements qui n'ont pas été pushés vers un dépôt public.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-revert">git revert</h2>
+                <p class="mb-5">
+                    Cette commande annule un instantané à partir duquel des commits ont été faits.
+                    Lorsque vous découvrez un commit erroné, le revert est une méthode sûre et facile de le supprimer complètement de la base de code.
+                </p>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-status">git status</h2>
+                <p class="mb-5">
+                    Affiche l'état du répertoire de travail et l'instantané stagé.
+                    Vous voudrez sans doute l'exécuter conjointement avec git add et git commit pour voir exactement ce qui est inclus dans l'instantané suivant.
+                </p>
+            </section>
+            <section class="sources p-5 ps-0">
+                <div class="source d-flex w-100">
+                    <p class="w-auto pe-3">Sources :</p>
+                    <div class="sources-links d-flex flex-column gap-2">
+                        <a href="https://www.gekkode.com/developpement/tutoriel-git-utilisation-des-commandes-de-base-de-git-pour-ajouter-et-gerer-les-fichiers-du-projet-notamment-commit-push-et-pull/" target="_blank">www.gekkode.com</a>
+                        <a href="https://www.atlassian.com/fr/git/glossary#commands" target="_blank">www.atlassian.com</a>
+                    </div>
+                </div>
+            </section>
+            <footer>
+                <img class="logo-simplon" src="src/assets/styles/images/logo-simplon.png" alt="Logo de Simplon">
+                <p class="text-center">Made@Simplon</p>
+            </footer>
+        </section>
+    </main>
+    <div id="aboutModal" class="modal hidden d-flex centered">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-between">
+                    <p>À propos</p>
+                    <div class="close-modal close-modal-cross d-flex centered" data-target="aboutModal">
+                        <span></span>
+                    </div>
+                </div>
+                <hr>
+                <div class="modal-body">
+                    <p class="mt-5 mb-5">Hello World !</p>
+                    <p class="mb-3">Je m'appelle Vivien et je prépare actuellement un titre de</p>
+                    <p><b>C</b>oncepteur<b>
+                    <p>D</b>éveloppeur d'</p>
+                    <p class="mb-3"><b>A</b>pplications</p>
+                    <p class="mb-5">chez Simplon à Boulogne-sur-Mer.</p>
+                    <p class="mb-2">Mes langages de prédilection ?</p>
+                    <ul class="mb-5 ps-6">
+                        <li><b>HTML / CSS / Javascript</b></li>
+                        <li><b>PHP</b></li>
+                    </ul>
+                    <p>Mon framework préféré ?</p>
+                    <p>Symfony</p>
+                </div>
+                <div class="modal-footer d-flex">
+                    <button class="close-modal close-modal-btn" data-target="aboutModal">Fermer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="src/assets/js/index-panel.js"></script>
+    <script src="src/assets/js/themes.js"></script>
+    <script src="src/assets/js/modal.js"></script>
+    <script src="src/assets/js/font-size.js"></script>
 </body>
 </html>
