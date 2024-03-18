@@ -13,6 +13,7 @@ fsIncrease.addEventListener("click", () => {
     if (checkMaxFontSize())
     {
         adjustFontSize(1);
+        checkMinFontSize();
         checkMaxFontSize();
     }
 });
@@ -22,6 +23,7 @@ fsDecrease.addEventListener("click", () => {
     {
         adjustFontSize(-1);
         checkMinFontSize();
+        checkMaxFontSize();
     }
 
 });
@@ -67,7 +69,7 @@ const getCurrentFontSize = () => {
 const applyFontSize = () => {
     const root = document.querySelector(':root');
     const activeFontSize = getCurrentFontSize();
-    root.style.setProperty(`--fs`,  `${activeFontSize}rem`);
+    root.style.setProperty(`--fs`, `${activeFontSize}rem`);
 };
 
 window.addEventListener("load", () => {
