@@ -200,7 +200,8 @@
     display: block;
     padding-top: 3px !important;
 }
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown:focus-within .dropdown-content {
     display: flex;
     flex-wrap: wrap;
 }

@@ -1,6 +1,6 @@
-const changeModeBtn = document.querySelector("#changeModeBtn");
+const changeMode = document.querySelector("#changeMode");
 
-changeModeBtn.addEventListener("click", () => {
+changeMode.addEventListener("click", () => {
     document.querySelector("#changeModeSwitch").style.transition = ".25s";
     checkCurrentTheme() === "dark" ? switchTheme("light") : switchTheme("dark");
 });
