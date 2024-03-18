@@ -1,5 +1,5 @@
 Url du site :
-
+https://2024-cda-boulogne.github.io/wiki-perso-vga
 
 
 Checklist Mise en Ligne d'un Site Statique
@@ -21,7 +21,7 @@ SEO Avancé
 [ ] SEO International : Appliquez l'attribut lang sur certaines balises si elles contiennent quelques lignes de texte écrites dans une langue différente.
 [ ] Méta Tags Sociaux : Intégrez Open Graph et Twitter Cards.
 Accessibilité
-[X] Navigation au Clavier : Assurez-vous que le site peut être navigué uniquement au clavier.
+[√] Navigation au Clavier : Assurez-vous que le site peut être navigué uniquement au clavier.
 [ ] Aria Landmarks : Utilisez les rôles ARIA pour identifier les zones de la page.
 [√] Contraste des Couleurs : Assurez un contraste suffisant entre le texte et son arrière-plan (WCAG contrast checker)
 [√] Taille de Police Ajustable : Permettez aux utilisateurs de modifier la taille du texte sans perte de fonctionnalité (utiliser l'unité rem, pas px)
