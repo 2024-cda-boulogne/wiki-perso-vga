@@ -1,0 +1,55 @@
+.page-index-panel {
+    position: sticky;
+    top: var(--navbar-height);
+    left: 0;
+    width: 250px;
+    // height: calc(100vh - var(--navbar-height));
+    margin-top: 61px;
+    padding-right: 1rem;
+    padding-bottom: 5rem;
+    background: var(--clr-secondary);
+    overflow: scroll;
+}
+.p-index-title button {
+    padding: 2px 5px;
+    font-size: .7rem;
+}
+.page-index-start {
+    color: var(--clr-primary) !important;
+}
+.page-index-panel a {
+    width: 100%;
+}
+.page-index-panel a:hover {
+    text-decoration: underline;
+}
+.page-content {
+    height: fit-content;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    overflow: scroll;
+}
+.index-panel-hide {
+    position: absolute;
+    display: none;
+}
+.nav-minified-btn {
+    width: 32px;
+    height: 32px;
+    display: none;
+    margin-right: 10px;
+    background-image: url(/assets/styles/images/nav-minified-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.nav-minified-show {
+    display: block;
+}
+.index-panel-show-minified {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-left: 10px;
+    z-index: 99;
+}
