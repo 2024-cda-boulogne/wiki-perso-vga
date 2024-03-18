@@ -63,7 +63,7 @@ const checkMinFontSize = () => {
 }
 
 const getCurrentFontSize = () => {
-    return localStorage.getItem("fs");
+    return localStorage.getItem("fs").slice(0, 3);
 };
 
 const applyFontSize = () => {
