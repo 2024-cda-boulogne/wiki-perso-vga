@@ -556,7 +556,8 @@
   padding-right: 1rem;
   padding-bottom: 5rem;
   background: var(--clr-secondary);
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .p-index-title button {
@@ -579,7 +580,7 @@
 .page-content {
   height: fit-content;
   padding-bottom: 1rem;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .index-panel-hide {
@@ -974,7 +975,8 @@ ul li ul li {
   padding: 0 15px;
   font-size: 0.75rem;
   margin-top: var(--navbar-height);
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
