@@ -28,10 +28,10 @@ Accessibilité
 [ ] Transcriptions pour Médias : Offrez des alternatives textuelles pour tout contenu audio ou vidéo.
 
 Bonnes Pratiques de Développement pour HTML/CSS/JS
-[ ] Utilisation d'un seul H1 par page : Structurez clairement le contenu principal.
-[ ] lang="fr" sur balise html: Si le contenu de votre page est principalement en français
-[ ] Balises Sémantiques : Améliorez l'accessibilité et le référencement.
-[ ] Hiérarchie des Titres : Respectez une structure logique.
+[X] Utilisation d'un seul H1 par page : Structurez clairement le contenu principal.
+[X] lang="fr" sur balise html: Si le contenu de votre page est principalement en français
+[X] Balises Sémantiques : Améliorez l'accessibilité et le référencement.
+[X] Hiérarchie des Titres : Respectez une structure logique.
 [ ] Compression des Ressources : Réduisez la taille des fichiers CSS, JS, et images.
 
 Avant la Mise en Ligne
