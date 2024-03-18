@@ -31,7 +31,7 @@ fsDecrease.addEventListener("click", () => {
 const adjustFontSize = (operator) => {
 
     const root = document.querySelector(':root');
-    const activeFontSize = getComputedStyle(document.documentElement).getPropertyValue('--fs').slice(0, 3);
+    const activeFontSize = getCurrentFontSize();
     const newFontSize = (+activeFontSize + (.1 * operator)).toFixed(1);
     
     root.style.setProperty(`--fs`, `${newFontSize}rem`);
@@ -63,18 +63,23 @@ const checkMinFontSize = () => {
 }
 
 const getCurrentFontSize = () => {
-    return localStorage.getItem("fs").slice(0, 3);
+    return (+localStorage.getItem("fs")).toFixed(1);
 };
 
-const applyFontSize = () => {
+const applyFontSizeAtLoading = () => {
     const root = document.querySelector(':root');
-    const activeFontSize = getCurrentFontSize();
+    let activeFontSize = getCurrentFontSize();
+    if (typeof activeFontSize !== 'number')
+    {
+        activeFontSize = 1.0;
+        localStorage.setItem("fs", activeFontSize);
+    }
     root.style.setProperty(`--fs`, `${activeFontSize}rem`);
 };
 
 window.addEventListener("load", () => {
-    applyFontSize();
-    currentFontSize.textContent = getCurrentFontSize();
+    applyFontSizeAtLoading();
+    currentFontSize.textContent = `${getCurrentFontSize()}`;
     checkMaxFontSize();
     checkMinFontSize();
 });
