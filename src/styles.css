@@ -1,5 +1,6 @@
 :root {
   --navbar-height: 50px;
+  --fs: 1;
   --theme: "light";
   --clr-primary: #222;
   --clr-secondary: #fff;
@@ -32,6 +33,15 @@
 .show {
   display: flex !important;
   animation: fade-in-from-top 0.25s linear forwards;
+}
+
+.fs-locked {
+  cursor: default;
+  color: #777 !important;
+}
+
+.fs-locked:active {
+  color: rgb(200, 40, 40) !important;
 }
 
 .d-flex {
@@ -140,6 +150,10 @@
   margin-bottom: 1rem;
 }
 
+.ms-auto {
+  margin-left: auto;
+}
+
 .me-auto {
   margin-right: auto;
 }
@@ -186,6 +200,10 @@
 
 .fs-i {
   font-style: italic;
+}
+
+.fs-bold {
+  font-weight: bold;
 }
 
 .fs-3 {
@@ -561,7 +579,6 @@
 .page-content {
   height: fit-content;
   padding-bottom: 1rem;
-  padding-left: 1rem;
   overflow: scroll;
 }
 
@@ -665,6 +682,57 @@ footer a {
   border: none !important;
 }
 
+#font-size-btn {
+  border: none;
+  background: none;
+  color: var(--clr-links);
+  cursor: pointer;
+}
+
+#font-size-btn:hover {
+  color: var(--clr-links-active);
+}
+
+.settings {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 100%;
+  right: 0;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--clr-secondary);
+  color: var(--clr-primary);
+  border: 1px solid var(--clr-primary);
+  border-radius: 5px;
+  z-index: 97;
+}
+
+.setting-fs {
+  user-select: none;
+}
+.setting-fs p:first-child {
+  width: auto;
+  text-align: left;
+  white-space: nowrap;
+}
+.setting-fs button {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border: none;
+  background: none;
+  font-size: 1.4rem;
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+.setting-fs button:hover {
+  color: var(--clr-links);
+}
+.setting-fs button:last-child {
+  padding-bottom: 4px;
+}
+
 @keyframes fade-in-from-top {
   0% {
     transform: translateY(-20px);
@@ -700,6 +768,13 @@ footer a {
   }
   h1 {
     font-size: 2rem;
+  }
+  th {
+    min-width: 70px;
+  }
+  th,
+  td {
+    padding: 5px;
   }
   p:not(#logoTitle) {
     font-size: 1rem !important;
@@ -747,10 +822,15 @@ footer a {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  font-size: var(--fs);
 }
 
 body {
   background: var(--clr-secondary);
+}
+
+header {
+  position: relative;
 }
 
 h1,
@@ -792,15 +872,6 @@ h3 {
 tr,
 td {
   text-align: center;
-}
-
-th {
-  min-width: 70px;
-}
-
-th,
-td {
-  padding: 5px;
 }
 
 a,
@@ -914,6 +985,10 @@ ul li ul li {
 
 .small-img {
   width: 240px;
+}
+
+img::before {
+  color: var(--clr-primary);
 }
 
 /*# sourceMappingURL=styles.css.map */

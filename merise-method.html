@@ -16,7 +16,7 @@
             <span></span>
             <div id="mobileMenu">
                 <nav id="mobileNav" class="d-flex flex-column">
-                    <h3>Menu principal</h3>
+                    <p class="nav-title w-100"><b>Menu principal</b></p>
                     <a href="index.html"><p>Accueil</p></a>
                     <hr>
                     <a href="git-commands.html"><p>Commandes Git</p></a>
@@ -89,6 +89,15 @@
             <header class="d-flex align-items-center w-100 mt-5 mb-3">
                 <nav class="nav-minified-btn"></nav>
                 <h1>Méthode MERISE</h1>
+                <button class="ms-auto" id="font-size-btn">Réglages</button>
+                <div class="settings hidden">
+                    <div class="setting-fs d-flex align-items-center gap-3">
+                        <p>Taille de police :</p>
+                        <p id="currentFontSize"></p>
+                        <button id="fs-increase">+</button>
+                        <button id="fs-decrease">-</button>
+                    </div>
+                </div>
             </header>
             <section>
                 <h2 class="w-100 mt-5 mb-5" id="definition">Définition de MERISE</h2>
@@ -554,5 +563,6 @@
     <script src="src/assets/js/index-panel.js"></script>
     <script src="src/assets/js/themes.js"></script>
     <script src="src/assets/js/modal.js"></script>
+    <script src="src/assets/js/font-size.js"></script>
 </body>
 </html>

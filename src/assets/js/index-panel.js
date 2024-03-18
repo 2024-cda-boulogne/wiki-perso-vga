@@ -1,4 +1,5 @@
 const indexPanel = document.querySelector('.page-index-panel');
+const pageContent = document.querySelector('#page-start');
 const indexPanelHideBtn = document.querySelector('#index-panel-hide-btn');
 const navMinifiedBtn = document.querySelector('.nav-minified-btn');
 const container = document.querySelector('.container');
@@ -8,8 +9,10 @@ indexPanelHideBtn.addEventListener("click", () => {
     {
         indexPanel.classList.toggle("index-panel-show-minified");
         indexPanel.classList.toggle("index-panel-hide");
+        pageContent.classList.add("ms-5");
         indexPanelHideBtn.textContent = "Masquer";
     } else {
+        pageContent.classList.remove("ms-5");
         indexPanelHideBtn.textContent = "Replacer dans la barre latérale";
     }
     indexPanel.classList.toggle("index-panel-hide");
