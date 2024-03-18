@@ -7,6 +7,7 @@
 @use 'page-content';
 @use 'theme-btn';
 @use 'footer';
+@use 'font-size';
 @use 'keyframes';
 @use 'media';
 
@@ -15,9 +16,13 @@
     margin: 0;
     box-sizing: border-box;
     font-family: sans-serif;
+    font-size: var(--fs);
 }
 body {
     background: var(--clr-secondary);
+}
+header {
+    position: relative;
 }
 h1,
 h2,
@@ -52,13 +57,6 @@ h3 {
 tr,
 td {
     text-align: center;
-}
-th {
-    min-width: 70px;
-}
-th,
-td {
-    padding: 5px;
 }
 a,
 a:visited {
@@ -155,4 +153,7 @@ ul li ul li {
 }
 .small-img {
     width: 240px;
+}
+img::before {
+    color: var(--clr-primary);
 }

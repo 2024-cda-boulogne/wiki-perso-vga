@@ -20,6 +20,13 @@
     h1 {
         font-size: 2rem;
     }
+    th {
+        min-width: 70px;
+    }
+    th,
+    td {
+        padding: 5px;
+    }
     p:not(#logoTitle) {
         font-size: 1rem !important;
     }

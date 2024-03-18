@@ -14,8 +14,8 @@ SEO de Contenu
 [ ] Recherche de Mots-clés: Vérifier avec un outil comme Ubersuggest les mots clés recherchés en relation avec votre contenu
 [ ] Qualité du Contenu : Soignez l'unicité et la valeur apportée.
 [ ] Titres et Meta Descriptions : Incorporez y les mots-clés pertinents. La meta description doit donner envie de consulter la page. Chaque page doit avoir un titre et une description uniques.
-[ ] Structure du contenu : Utilisez judicieusement les balises H1, H2, H3...
-[ ] Images avec attribut alt : Facilitez la compréhension des images par les moteurs.
+[X] Structure du contenu : Utilisez judicieusement les balises H1, H2, H3...
+[X] Images avec attribut alt : Facilitez la compréhension des images par les moteurs.
 
 SEO Avancé
 [ ] SEO International : Appliquez l'attribut lang sur certaines balises si elles contiennent quelques lignes de texte écrites dans une langue différente.
@@ -23,8 +23,8 @@ SEO Avancé
 Accessibilité
 [ ] Navigation au Clavier : Assurez-vous que le site peut être navigué uniquement au clavier.
 [ ] Aria Landmarks : Utilisez les rôles ARIA pour identifier les zones de la page.
-[ ] Contraste des Couleurs : Assurez un contraste suffisant entre le texte et son arrière-plan (WCAG contrast checker)
-[ ] Taille de Police Ajustable : Permettez aux utilisateurs de modifier la taille du texte sans perte de fonctionnalité (utiliser l'unité rem, pas px)
+[X] Contraste des Couleurs : Assurez un contraste suffisant entre le texte et son arrière-plan (WCAG contrast checker)
+[X] Taille de Police Ajustable : Permettez aux utilisateurs de modifier la taille du texte sans perte de fonctionnalité (utiliser l'unité rem, pas px)
 [ ] Transcriptions pour Médias : Offrez des alternatives textuelles pour tout contenu audio ou vidéo.
 
 Bonnes Pratiques de Développement pour HTML/CSS/JS
