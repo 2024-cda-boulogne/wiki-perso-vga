@@ -1,5 +1,6 @@
 footer {
     position: relative;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,4 +25,5 @@ footer a {
     width: 69px !important;
     height: 69px !important;
     background-size: contain;
+    border: none !important;
 }

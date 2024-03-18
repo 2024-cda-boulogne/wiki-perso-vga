@@ -97,6 +97,17 @@ hr {
 .code-example p {
     color: var(--clr-code-example-text);
 }
+.git-example {
+    padding: 15px 20px;
+    background: var(--clr-git-example-bg);
+    border: 1px solid var(--clr-git-example-border);
+    p {
+        color: var(--clr-git-example-text);
+    }
+    span {
+        color: #a6e22e;
+    }
+}
 h2,
 h3 {
     position: relative;

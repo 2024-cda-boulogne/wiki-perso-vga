@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VivipediA</title>
+    <title>Commandes Git — VivipédiA</title>
     <link rel="stylesheet" href="/src/styles.css">
 </head>
 <body>
@@ -30,7 +30,7 @@
         <a id="logo" class="d-flex" href="index.html">
             <div id="globe"></div>
             <div id="logoText" class="d-flex flex-column justify-content-center">
-                <p>V<span class="fs-3">IVIPÉDI</span>A</p>
+                <p id="logoTitle">V<span class="fs-3">IVIPÉDI</span>A</p>
                 <p>Mon encyclopédie</p>
             </div>
         </a>
@@ -68,19 +68,21 @@
             <p class="p-index-title mb-5"><b>Sommaire</b><button class="ms-3" id="index-panel-hide-btn">Masquer</button></p>
             <a class="page-index-start mt-3 mb-5" href="#page-start">Début</a>
             <a class="mb-5" href="#git-add">git add</a>
+            <a class="mb-5" href="#git-commmit">git commmit</a>
+            <a class="mb-5" href="#git-push">git push</a>
+            <a class="mb-5" href="#git-pull">git pull</a>
             <a class="mb-5" href="#git-branch">git branch</a>
-            <a class="mb-5" href="#git-checkout">git checkout</a>
+            <a class="mb-5 ps-4" href="#git-fetch">git fetch</a>
+            <a class="mb-5 ps-4" href="#git-checkout">git checkout</a>
+            <a class="mb-5 ps-4" href="#git-merge">git merge</a>
+
+
             <a class="mb-5" href="#git-clean">git clean</a>
             <a class="mb-5" href="#git-clone">git clone</a>
-            <a class="mb-5" href="#git-commmit">git commmit</a>
             <a class="mb-5" href="#git-commmit-amend">git commit --amend</a>
             <a class="mb-5" href="#git-config">git config</a>
-            <a class="mb-5" href="#git-fetch">git fetch</a>
             <a class="mb-5" href="#git-init">git init</a>
             <a class="mb-5" href="#git-log">git log</a>
-            <a class="mb-5" href="#git-merge">git merge</a>
-            <a class="mb-5" href="#git-pull">git pull</a>
-            <a class="mb-5" href="#git-push">git push</a>
             <a class="mb-5" href="#git-rebase">git rebase</a>
             <a class="mb-5" href="#git-rebase-i">git rebase --i</a>
             <a class="mb-5" href="#git-reflog">git reflog</a>
@@ -95,24 +97,107 @@
                 <h1>Commandes Git</h1>
             </header>
             <section>
-                <h2 class="w-100 mt-5 mb-5" id="git-add">git add</h2>
+                <h2 class="w-100 mt-5 mb-5" id="git-add">Git Add : Ajouter des fichiers au dépôt</h2>
                 <p class="mb-5">
-                    Déplace les changements du répertoire de travail vers la zone de staging. Ceci vous permet de préparer un instantané avant de faire des commits dans l'historique officiel.
+                    La première commande que vous devriez apprendre est git add.
+                    Cette commande permet d’ajouter des fichiers à l’index (un espace de travail intermédiaire) de Git,
+                    ce qui signifie qu’ils seront inclus dans le prochain commit.
+                    Vous pouvez ajouter un fichier spécifique en utilisant la commande :
                 </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git add nom_du_fichier</p>
+                </div>
+                <p class="mb-5">
+                    Ou tous les fichiers dans le répertoire courant en utilisant :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git add .</p>
+                </div>
             </section>
             <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-branch">git branch</h2>
+                <h2 class="w-100 mt-5 mb-5" id="git-commmit">Git Commit : Enregistrer les modifications dans l'historique</h2>
                 <p class="mb-5">
-                    Cette commande est votre outil d'administration des branches à usage général. Elle vous permet de créer des environnements de développement isolés dans un dépôt unique.
+                    Une fois que vous avez ajouté des fichiers à l’index, vous pouvez enregistrer les modifications dans l’historique de Git en utilisant la commande <b>git commit</b>.
+                    Cette commande prend un message qui décrit les modifications que vous avez apportées. Par exemple :
                 </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git commit -m <span>"Ajout de la fonctionnalité X"</span></p>
+                </div>
             </section>
             <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-checkout">git checkout</h2>
+                <h2 class="w-100 mt-5 mb-5" id="git-push">Git Push : Envoyer les modifications sur le dépôt</h2>
                 <p class="mb-5">
-                    En plus de faire un checkout des anciens commits et les anciennes révisions de fichier, git checkout permet également de parcourir les branches existantes.
-                    Associée aux commandes Git de base, elle permet de travailler sur une ligne de développement spécifique.
+                    Une fois que vous avez enregistré des modifications dans l’historique de votre dépôt local, vous pouvez envoyer ces modifications sur le dépôt distant en utilisant la commande git push.
+                    Cette commande envoie les commits de votre dépôt local vers le dépôt distant. Par exemple :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git push origin nom_de_votre_branche</p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-pull">Git Pull : Récupérer les modifications du dépôt</h2>
+                <p class="mb-5">
+                    Si d’autres personnes ont apporté des modifications au dépôt distant, vous pouvez récupérer ces modifications sur votre ordinateur en utilisant la commande git pull.
+                    Cette commande récupère les commits du dépôt distant et les fusionne dans votre dépôt local. Par exemple :
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git pull origin nom_de_votre_branche</p>
+                </div>
+            </section>
+            <section class="no-border">
+                <h2 class="w-100 mt-5 mb-5" id="git-branch">Git Branch</h2>
+                <p class="mb-5">
+                    Lorsque vous travaillez sur un projet en équipe, il est important de pouvoir gérer les modifications en parallèle et de résoudre les conflits éventuels.
+                    Les branches de Git vous permettent de faire cela en créant des versions séparées de votre projet qui peuvent être modifiées indépendamment les unes des autres.
+                </p>
+                <h3 class="w-100 mb-5" id="git-fetch">Récupérer les branches depuis GitHub/GitLab</h3>
+                <p class="mb-5">
+                    Il est également possible de récupérer les branches créées par d’autres collaborateurs sur GitHub ou GitLab.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git fetch origin nom_de_la_branche</p>
+                </div>
+                <p class="mb-5">
+                    Il est possible de récupérer toutes les branches d’un coup en utilisant la commande git <b>fetch --all</b>.
+                    Cette commande va récupérer toutes les branches du dépôt distant sur votre ordinateur, mais n’en fusionnera aucune automatiquement. 
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git fetch --all</p>
+                </div>
+                <p class="mb-5">
+                    Vous devrez ensuite utiliser la commande <b>git merge</b> pour fusionner les branches récupérées avec vos branches locales.
+                    Il est également possible de spécifier <b>--prune</b> pour supprimer les branches distantes qui n’existent plus.
+                    Il est donc important de bien comprendre les conséquences de cette commande avant de l’utiliser.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git merge</p>
+                </div>
+                <h3 class="w-100 mb-5">Créer une nouvelle branche</h3>
+                <p class="mb-5">
+                    Avant de pouvoir travailler sur une nouvelle fonctionnalité ou de corriger un bug, vous pouvez créer une nouvelle branche à partir de la branche principale.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git branch nom_de_la_branche</p>
+                </div>
+                <h3 class="w-100 mb-5" id="git-checkout">Passer à une autre branche</h3>
+                <p class="mb-5">
+                    Une fois que vous avez créé une nouvelle branche, vous devez vous déplacer sur cette branche pour pouvoir y travailler.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git checkout nom_de_la_branche</p>
+                </div>
+                <h3 class="w-100 mb-5" id="git-merge">Fusionner les branches</h3>
+                <p class="mb-5">
+                    Une fois que vous avez terminé de travailler sur une branche, vous pouvez fusionner les modifications de cette branche avec la branche principale.
+                </p>
+                <div class="git-example me-auto mb-5">
+                    <p>git merge nom_de_la_branche</p>
+                </div>
+                <p class="mb-5">
+                    En utilisant les branches de Git, vous pouvez facilement gérer les modifications en parallèle et résoudre les conflits éventuels lorsque vous travaillez en équipe sur un projet.
                 </p>
             </section>
+ 
             <section class="no-border">
                 <h2 class="w-100 mt-5 mb-5" id="git-clean">git clean</h2>
                 <p class="mb-5">
@@ -126,12 +211,7 @@
 
                 </p>
             </section>
-            <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-commmit">git commit</h2>
-                <p class="mb-5">
-                    Prend l'instantané stagé et en fait un commit dans l'historique du projet. Combinée à git add, cette commande définit le workflow de base pour tous les utilisateurs de Git.
-                </p>
-            </section>
+
             <section class="no-border">
                 <h2 class="w-100 mt-5 mb-5" id="git-commit-amend">git commit --amend</h2>
                 <p class="mb-5">
@@ -146,13 +226,7 @@
                     Généralement, vous n'aurez qu'à utiliser cette méthode après l'installation de Git sur un nouvel ordinateur de développement.
                 </p>
             </section>
-            <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-fetch">git fetch</h2>
-                <p class="mb-5">
-                    Durant le fetch, le système télécharge une branche dans un autre dépôt ainsi que tous les commits et les fichiers associés.
-                    Le process n'a pas pour objectif d'intégrer quoi que ce soit à votre dépôt local. Il vous permet d'inspecter les changements avant de les merger avec votre projet.
-                </p>
-            </section>
+
             <section class="no-border">
                 <h2 class="w-100 mt-5 mb-5" id="git-init">git init</h2>
                 <p class="mb-5">Lance un nouveau dépôt Git. Si vous souhaitez placer un projet sous contrôle de révision, c'est la première commande que vous devez apprendre.</p>
@@ -161,27 +235,6 @@
                 <h2 class="w-100 mt-5 mb-5" id="git-log">git log</h2>
                 <p class="mb-5">
                     Vous permet d'explorer les anciennes révisions d'un projet. Cette commande propose plusieurs options de formatage pour l'affichage des instantanés commités.
-                </p>
-            </section>
-            <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-merge">git merge</h2>
-                <p class="mb-5">
-                    Puissante méthode d'intégration des changements des branches divergentes. Après avoir forké l'historique du projet avec git branch, git merge vous permet de les réunir à nouveau.
-                </p>
-            </section>
-            <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-pull">git pull</h2>
-                <p class="mb-5">
-                    Le pull est une version automatisée de la commande git fetch. Il télécharge une branche à partir d'un dépôt distant, puis la merge immédiatement avec la branche courante.
-                    C'est l'équivalent, dans Git, de svn update.
-                </p>
-            </section>
-            <section class="no-border">
-                <h2 class="w-100 mt-5 mb-5" id="git-push">git push</h2>
-                <p class="mb-5">
-                    Le push est le contraire du fetch (avec quelques mises en garde).
-                    Il vous permet de déplacer une branche locale dans un autre dépôt, ce qui est pratique pour publier des contributions.
-                    Il fonctionne comme un commit SVN, mais en envoyant une série de commits au lieu d'un ensemble de changements unique.
                 </p>
             </section>
             <section class="no-border">
@@ -232,6 +285,15 @@
                     Affiche l'état du répertoire de travail et l'instantané stagé.
                     Vous voudrez sans doute l'exécuter conjointement avec git add et git commit pour voir exactement ce qui est inclus dans l'instantané suivant.
                 </p>
+            </section>
+            <section class="sources p-5 ps-0">
+                <div class="source d-flex w-100">
+                    <p class="w-auto pe-3">Sources :</p>
+                    <div class="sources-links d-flex flex-column gap-2">
+                        <a href="https://www.gekkode.com/developpement/tutoriel-git-utilisation-des-commandes-de-base-de-git-pour-ajouter-et-gerer-les-fichiers-du-projet-notamment-commit-push-et-pull/" target="_blank">www.gekkode.com</a>
+                        <a href="https://www.atlassian.com/fr/git/glossary#commands" target="_blank">www.atlassian.com</a>
+                    </div>
+                </div>
             </section>
             <footer>
                 <img class="logo-simplon" src="/assets/styles/images/logo-simplon.png" alt="Logo de Simplon">

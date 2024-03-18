@@ -12,6 +12,8 @@
   --clr-code-example-bg: #f8f8f8;
   --clr-code-example-text: #3D7B7B;
   --clr-code-example-border: #eaecf0;
+  --clr-git-example-bg: #2b2b2b;
+  --clr-git-example-text: #f8f8f8;
   --clr-hr: #a1a1a1;
 }
 
@@ -42,6 +44,10 @@
 
 .flex-wrap {
   flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
 }
 
 .justify-content-center {
@@ -78,7 +84,15 @@
 }
 
 .gap-1 {
-  gap: 1rem;
+  gap: 0.1rem;
+}
+
+.gap-2 {
+  gap: 0.2rem;
+}
+
+.gap-3 {
+  gap: 0.5rem;
 }
 
 .text-center {
@@ -126,6 +140,22 @@
   margin-bottom: 1rem;
 }
 
+.me-auto {
+  margin-right: auto;
+}
+
+.p-5 {
+  padding: 1rem;
+}
+
+.pe-3 {
+  padding-right: 0.5rem;
+}
+
+.ps-0 {
+  padding-left: 0;
+}
+
 .ps-3 {
   padding-left: 0.5rem;
 }
@@ -143,11 +173,15 @@
 }
 
 .w-auto {
-  width: auto;
+  width: auto !important;
 }
 
 .w-100 {
   width: 100%;
+}
+
+.h-100 {
+  height: 100% !important;
 }
 
 .fs-i {
@@ -236,7 +270,7 @@
   color: #fff;
   background-color: #007bff;
   border-style: none;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid transparent;
   cursor: pointer;
 }
@@ -500,7 +534,6 @@
   top: var(--navbar-height);
   left: 0;
   width: 250px;
-  height: calc(100vh - var(--navbar-height));
   margin-top: 61px;
   padding-right: 1rem;
   padding-bottom: 5rem;
@@ -601,6 +634,7 @@
 
 footer {
   position: relative;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -628,6 +662,7 @@ footer a {
   width: 69px !important;
   height: 69px !important;
   background-size: contain;
+  border: none !important;
 }
 
 @keyframes fade-in-from-top {
@@ -666,7 +701,7 @@ footer a {
   h1 {
     font-size: 2rem;
   }
-  p {
+  p:not(#logoTitle) {
     font-size: 1rem !important;
   }
   .container img:not(.small-img) {
@@ -698,6 +733,10 @@ footer a {
   }
   #logo {
     width: 200px;
+  }
+  #laptopNav a,
+  #laptopNav button {
+    min-width: 120px;
   }
   #changeMode {
     margin-left: 160px;
@@ -806,6 +845,18 @@ hr {
 
 .code-example p {
   color: var(--clr-code-example-text);
+}
+
+.git-example {
+  padding: 15px 20px;
+  background: var(--clr-git-example-bg);
+  border: 1px solid var(--clr-git-example-border);
+}
+.git-example p {
+  color: var(--clr-git-example-text);
+}
+.git-example span {
+  color: #a6e22e;
 }
 
 h2,

@@ -20,7 +20,7 @@
     h1 {
         font-size: 2rem;
     }
-    p {
+    p:not(#logoTitle) {
         font-size: 1rem !important;
     }
     .container img:not(.small-img) {
@@ -52,6 +52,12 @@
     }
     #logo {
         width: 200px;
+    }
+    #laptopNav {
+        a,
+        button {
+        min-width: 120px;
+        }
     }
     #changeMode {
         margin-left: 160px;
