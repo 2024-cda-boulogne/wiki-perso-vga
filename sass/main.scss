@@ -144,7 +144,8 @@ ul li ul li {
     padding: 0 15px;
     font-size: .75rem;
     margin-top: var(--navbar-height);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 .container img:not(.small-img) {

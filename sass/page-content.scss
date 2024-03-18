@@ -8,7 +8,8 @@
     padding-right: 1rem;
     padding-bottom: 5rem;
     background: var(--clr-secondary);
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 .p-index-title button {
     padding: 2px 5px;
@@ -26,7 +27,7 @@
 .page-content {
     height: fit-content;
     padding-bottom: 1rem;
-    overflow: scroll;
+    overflow: hidden;
 }
 .index-panel-hide {
     position: absolute;
