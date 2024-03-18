@@ -688,6 +688,7 @@ footer a {
 }
 
 #font-size-btn {
+  margin-right: 0.2rem;
   border: none;
   background: none;
   color: var(--clr-links);
