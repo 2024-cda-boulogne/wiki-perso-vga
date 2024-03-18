@@ -69,7 +69,8 @@ const getCurrentFontSize = () => {
 const applyFontSizeAtLoading = () => {
     const root = document.querySelector(':root');
     let activeFontSize = getCurrentFontSize();
-    if (typeof activeFontSize !== 'number')
+    
+    if (typeof +activeFontSize !== 'number')
     {
         activeFontSize = 1.0;
         localStorage.setItem("fs", activeFontSize);
